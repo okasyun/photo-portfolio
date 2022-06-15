@@ -5,6 +5,7 @@ $cMenuOpen: $cWhite;
     display: flex;
     justify-content: center;
     position: fixed;
+    align-items: center;
     // top: $navHeight; //headerより下に配置
     top: 0;
     width: 100%;
@@ -48,9 +49,9 @@ $cMenuOpen: $cWhite;
         margin: 0;
         position: absolute;
         z-index: 100;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        // top: 40%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
     }
 
     &__item{

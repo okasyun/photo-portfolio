@@ -8,6 +8,7 @@ Stylesheet: 変数リスト
   display: flex;
   justify-content: center;
   position: fixed;
+  align-items: center;
   top: 0;
   width: 100%;
   height: 100vh;
@@ -42,9 +43,6 @@ Stylesheet: 変数リスト
   margin: 0;
   position: absolute;
   z-index: 100;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .mobile-menu__item {
   text-align: center;
