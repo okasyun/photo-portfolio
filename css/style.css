@@ -100,7 +100,6 @@ Stylesheet: ベーススタイル
 body {
   background-color: black;
   margin: 0;
-  overflow: hidden;
 }
 
 img {
@@ -210,7 +209,6 @@ li {
 }
 
 #main-content {
-  overflow: hidden;
   position: relative;
   height: 100vh;
   display: flex;

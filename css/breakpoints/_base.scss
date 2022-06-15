@@ -7,7 +7,6 @@ Stylesheet: ベーススタイル
 body {
     background-color: $cBlack;
     margin: 0;
-    overflow: hidden;
 }
 
 img {
@@ -155,7 +154,6 @@ li {
 }
 
 #main-content {
-    overflow: hidden;
     @extend .content-width;
     position: relative;
     // margin-top: $navHeight;
