@@ -106,8 +106,8 @@ body {
 }
 
 img {
-  max-width: 80%;
-  height: 50%;
+  max-width: 100%;
+  max-height: 70%;
   vertical-align: bottom;
   aspect-ratio: 4/5;
 }
@@ -122,7 +122,7 @@ li {
 }
 
 .content-width, .footer, #main-content, .header__inner {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   max-width: 1070px;
 }
