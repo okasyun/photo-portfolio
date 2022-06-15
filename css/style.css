@@ -106,7 +106,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 70%;
   vertical-align: bottom;
   aspect-ratio: 4/5;
