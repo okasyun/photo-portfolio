@@ -1,0 +1,18 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+
+.header {
+    &__inner {
+        justify-content: space-between;
+    }
+    &__nav {
+        display: block;
+    }
+}
+
+.mobile-menu, .mobile-menu__btn {
+    display: none;
+}

@@ -1,0 +1,137 @@
+$cMenuClose: $cWhite;
+$cMenuOpen: $cWhite;
+
+.mobile-menu {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    // top: $navHeight; //headerより下に配置
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;;
+    opacity: 0; // 初めは透明
+    background-color: $cBlack;
+    transition: all .3s;
+
+    &__btn {
+        // 謎
+        position: absolute;
+        right: 0;
+        margin-right: 20px;
+        background-color: unset;
+        border: none;
+        outline: none !important;
+        cursor: pointer;
+        
+
+        & > span {
+            background-color: $cMenuClose;
+            // position: absolute;
+            // width 100%,height100%は親の要素の影響を受ける
+            border-radius: 2px;
+            width: 35px;
+            height: 3px;
+            display: block;
+            margin-bottom: 9px;
+            transition: transform .5s;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+    }
+    
+    &__main {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        z-index: 100;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item{
+        text-align: center;
+        margin-bottom: 25px;
+
+        &:last-child {
+                margin-bottom: 0;
+            }
+
+        & > a {
+            @extend .link;
+
+            &:hover {
+                    color: red;
+                    &::after {
+                        // X方向にスケール拡大
+                        transform: scale(1, 1);
+                    }
+                }
+
+            &::after {
+                @extend .red-line;
+            }
+        }
+
+        &.current > a {
+            color: red;
+
+            &::after {
+                // X方向にスケール拡大
+                transform: scale(1, 1);
+            }
+        }
+    }
+
+    &__icon {
+        padding: 0;
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &__social-item {
+        // margin-left: 20px;
+        & > a {
+            @extend .link;
+    
+            &:hover {
+                color: red;
+    
+                &::after {
+                    // X方向にスケール拡大
+                    transform: scale(1, 1);
+                }
+            }
+        }
+    }
+}
+
+.menu-open {
+    &.mobile-menu {
+        // visibility: visible;
+        z-index: 100;
+        opacity: 1;
+        &__btn {
+            & > span {
+
+                &:nth-child(1) {
+                    transform: translateY(11px) rotate(135deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-11px) rotate(-135deg);
+                }
+            }
+        }
+    }
+}
