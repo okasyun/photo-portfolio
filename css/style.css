@@ -209,7 +209,9 @@ li {
 }
 
 #main-content {
+  overflow: hidden;
   position: relative;
+  margin-top: 80px;
   height: 100vh;
   display: flex;
   justify-content: center;

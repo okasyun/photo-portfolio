@@ -154,9 +154,10 @@ li {
 }
 
 #main-content {
+    overflow: hidden;
     @extend .content-width;
     position: relative;
-    // margin-top: $navHeight;
+    margin-top: $navHeight;
     height: 100vh;
     display: flex;
     justify-content: center;
