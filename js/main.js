@@ -30,3 +30,47 @@ $(".header__li").click(function () {
 $(".mobile-menu__item").click(function () {
     $(this).toggleClass('current');
 });
+
+
+const images = document.querySelectorAll(".img-display img")
+let num = 1;
+console.log(images);
+
+setInterval(() => {
+    num++;
+    const image = document.querySelector(".img-display .active")
+    image.classList.remove("active")
+    if (num >= images.length) {
+        images[0].classList.add("active");
+        num = 1;
+    }
+    else {
+        image.nextElementSibling.classList.add("active")
+    }
+
+}, 5000)
+
+// const $images = $('.img-display img');
+// console.log($images.length);
+// console.log($images)
+
+// let num = 1;
+// setInterval(() => {
+//     num++;
+//     const $image = $('.img-display .active');
+//     $('.img-display .active').removeClass('active');
+
+//     if (num >= $images.length) {
+//         $images.item(0).addClass("active");
+//         num = 1;
+//     }
+//     else {
+//     $image.next().addClass('active');
+//     }
+// }, 5000);
+
+// queryselectorallで全画像取得
+// ランダムメソッドでランダムに数を取得
+// そのランダム数に一致するインデックスの画像にactiveつける
+
+// 時間関数でactive除去して次の要素に追加する

@@ -1,3 +1,5 @@
+// ボタンをもう一度開いても位置は変えないようにする
+
 $cMenuClose: $cWhite;
 $cMenuOpen: $cWhite;
 
@@ -13,7 +15,7 @@ $cMenuOpen: $cWhite;
     z-index: -1;;
     opacity: 0; // 初めは透明
     background-color: $cBlack;
-    transition: all 0.3s;
+    transition: all .5s;
 
     &__btn {
         // 謎
@@ -35,11 +37,11 @@ $cMenuOpen: $cWhite;
             height: 2px;
             display: block;
             margin-bottom: 9px;
-            transition: transform .5s ease;
+            transition: transform .5s;
 
             &:nth-child(2) {
                 opacity: 1;
-                transition: opacity .5s ease;
+                transition: opacity .5s;
             }
             &:last-child {
                 margin-bottom: 0;
@@ -117,7 +119,6 @@ $cMenuOpen: $cWhite;
 
 .menu-open {
     &.mobile-menu {
-        // visibility: visible;
         z-index: 100;
         opacity: 1;
 
