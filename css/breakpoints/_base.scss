@@ -183,6 +183,8 @@ li {
         // visibility: hidden;
         display: none;
         &.active {
+            animation-name: img-animate;
+            animation-duration: 1s;
             // visibility: visible;
             display: block;
             // max-width: 90%;
@@ -195,4 +197,15 @@ li {
 
 .footer {
     @extend .content-width;
+}
+
+@keyframes img-animate {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
 }

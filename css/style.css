@@ -269,9 +269,30 @@ li {
   display: none;
 }
 .img-display > img.active {
+  -webkit-animation-name: img-animate;
+          animation-name: img-animate;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   display: block;
 }
 
+@-webkit-keyframes img-animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes img-animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (min-width: 600px) {
   /******************************************************************
 

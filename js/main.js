@@ -37,6 +37,10 @@ let num = 1;
 console.log(images);
 
 setInterval(() => {
+    // const ran_num = Math.floor(Math.random() * images.length);
+    // const array = Array.from(images);
+    // const word = array.splice(ran_num,1)[0];
+    // console.log(word);
     num++;
     const image = document.querySelector(".img-display .active")
     image.classList.remove("active")
@@ -49,6 +53,8 @@ setInterval(() => {
     }
 
 }, 5000)
+
+
 
 // const $images = $('.img-display img');
 // console.log($images.length);
