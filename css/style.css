@@ -248,7 +248,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 80 auto 0;
 }
 
 .img-display {
@@ -258,6 +258,7 @@ li {
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   -o-object-fit: contain;
      object-fit: contain;
   margin: 0 auto;
