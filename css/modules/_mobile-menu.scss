@@ -35,8 +35,12 @@ $cMenuOpen: $cWhite;
             height: 2px;
             display: block;
             margin-bottom: 9px;
-            transition: transform .5s;
+            transition: transform .5s ease;
 
+            &:nth-child(2) {
+                opacity: 1;
+                transition: opacity .5s ease;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -119,7 +123,7 @@ $cMenuOpen: $cWhite;
 
         &__item, &__icon {
             animation-name: menu-animate;
-            animation-duration: 0.5s;
+            animation-duration: .5s;
             animation-fill-mode: forwards;
             // animation-timing-function: cubic-bezier(.25, 1, .5, 1);
             animation-timing-function: ease;
@@ -133,9 +137,7 @@ $cMenuOpen: $cWhite;
                     transform: translateY(11px) rotate(135deg);
                 }
                 &:nth-child(2) {
-                    animation-name: btn-animate;
-                    animation-duration: .5s;
-                    animation-fill-mode: forwards;
+                    opacity: 0;
                 }
 
                 &:nth-child(3) {
@@ -154,15 +156,5 @@ $cMenuOpen: $cWhite;
     100% {
         opacity: 1;
         transform: translateY(-15px);
-    }
-}
-
-@keyframes btn-animate {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
     }
 }
