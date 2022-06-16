@@ -13,6 +13,8 @@
 $(".mobile-menu__btn").click(function () {
     $(this).toggleClass('menu-open');
     $('.mobile-menu').toggleClass('menu-open');
+    $('.mobile-menu__item').toggleClass('menu-open');
+    $('.mobile-menu__icon').toggleClass('menu-open'); 
 });
 
 $(".mobile-menu a").click(function () {
