@@ -133,7 +133,9 @@ $cMenuOpen: $cWhite;
                     transform: translateY(11px) rotate(135deg);
                 }
                 &:nth-child(2) {
-                    opacity: 0;
+                    animation-name: btn-animate;
+                    animation-duration: .5s;
+                    animation-fill-mode: forwards;
                 }
 
                 &:nth-child(3) {
@@ -152,5 +154,15 @@ $cMenuOpen: $cWhite;
     100% {
         opacity: 1;
         transform: translateY(-15px);
+    }
+}
+
+@keyframes btn-animate {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
