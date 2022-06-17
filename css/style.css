@@ -132,9 +132,6 @@ Stylesheet: ベーススタイル
 ******************************************************************/
 html {
   font-family: "Chivo", sans-serif;
-  font-family: "Domine", serif;
-  font-family: "Noto Serif JP", serif;
-  font-family: "Playfair Display", serif;
 }
 
 body {
@@ -293,23 +290,6 @@ li {
   display: block;
 }
 
-@-webkit-keyframes img-animate {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes img-animate {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @-webkit-keyframes img-wrap {
   50% {
     transform: translateY(100%);
@@ -318,6 +298,7 @@ li {
     transform: translateY(100%);
   }
 }
+
 @keyframes img-wrap {
   50% {
     transform: translateY(100%);
