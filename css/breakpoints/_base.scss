@@ -163,7 +163,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px auto 0;
+    margin: 10px auto 0;
 }
 
 .img-display {
@@ -193,9 +193,7 @@ li {
 
     & > img {
         overflow: hidden;
-        // z-index: 500;
         cursor: pointer;
-        // visibility: hidden;
         display: none;
         &.active {
             // animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
@@ -205,11 +203,7 @@ li {
             // animation-timing-function: ease;
             // // visibility: visible;
             display: block;
-            // max-width: 90%;
-            // max-height: 70%;
-            // vertical-align: bottom;
-            // aspect-ratio: 4 / 5;
-    }
+        }
     }
 }
 
