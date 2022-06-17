@@ -140,7 +140,6 @@ img {
   max-width: 90%;
   max-height: 70%;
   vertical-align: bottom;
-  aspect-ratio: 4/5;
 }
 
 a {
@@ -254,13 +253,11 @@ li {
 .img-display {
   position: absolute;
   overflow: hidden;
-  width: 100%;
+  width: 70%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .img-display::before {
   -webkit-animation: img-wrap 6s forwards infinite;
@@ -276,6 +273,9 @@ li {
   z-index: 1;
 }
 .img-display > img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
   overflow: hidden;
   cursor: pointer;
   display: none;
@@ -302,7 +302,7 @@ li {
   }
 }
 @-webkit-keyframes img-wrap {
-  50% {
+  60% {
     transform: translateY(100%);
   }
   100% {
@@ -310,7 +310,7 @@ li {
   }
 }
 @keyframes img-wrap {
-  50% {
+  60% {
     transform: translateY(100%);
   }
   100% {

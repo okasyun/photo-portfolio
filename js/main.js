@@ -9,51 +9,53 @@
 // header_current.addEventListener("click", () => header_current.classList.toggle('current'));
 // mobile_current.addEventListener("click", () => mobile_current.classList.toggle('current'));
 
+window.onload = function () {
 
-$(".mobile-menu__btn").click(function () {
-    $(this).toggleClass('menu-open');
-    $('.mobile-menu').toggleClass('menu-open');
-    $('.mobile-menu__item').toggleClass('menu-open');
-    $('.mobile-menu__icon').toggleClass('menu-open'); 
-});
+    $(".mobile-menu__btn").click(function () {
+        $(this).toggleClass('menu-open');
+        $('.mobile-menu').toggleClass('menu-open');
+        $('.mobile-menu__item').toggleClass('menu-open');
+        $('.mobile-menu__icon').toggleClass('menu-open'); 
+    });
 
-$(".mobile-menu a").click(function () {
-    $('mobile-menu').removeClass('menu-open');
-    $('mobile-menu__btn').removeClass('menu-open');
-});
+    $(".mobile-menu a").click(function () {
+        $('mobile-menu').removeClass('menu-open');
+        $('mobile-menu__btn').removeClass('menu-open');
+    });
 
-$(".header__li").click(function () {
-    $(this).toggleClass('current');
-});
+    $(".header__li").click(function () {
+        $(this).toggleClass('current');
+    });
 
-// クリックしたら今までのcurrentを削除するようにできていない
-$(".mobile-menu__item").click(function () {
-    $(this).toggleClass('current');
-});
+    // クリックしたら今までのcurrentを削除するようにできていない
+    $(".mobile-menu__item").click(function () {
+        $(this).toggleClass('current');
+    });
 
 
-const images = document.querySelectorAll(".img-display img")
-let num = 1;
-console.log(images);
+    const images = document.querySelectorAll(".img-display img")
+    let num = 0;
+    console.log(images);
 
-setInterval(() => {
-    // const ran_num = Math.floor(Math.random() * images.length);
-    // const array = Array.from(images);
-    // const word = array.splice(ran_num,1)[0];
-    // console.log(word);
-    num++;
-    const image = document.querySelector(".img-display .active")
-    image.classList.remove("active")
-    if (num >= images.length) {
-        images[0].classList.add("active");
-        num = 1;
-    }
-    else {
-        image.nextElementSibling.classList.add("active")
-    }
+    setInterval(() => {
+        // const ran_num = Math.floor(Math.random() * images.length);
+        // const array = Array.from(images);
+        // const word = array.splice(ran_num,1)[0];
+        // console.log(word);
+        num++;
+        const image = document.querySelector(".img-display .active")
+        image.classList.remove("active")
+        if (num >= images.length) {
+            images[0].classList.add("active");
+            num = 0;
+        }
+        else {
+            image.nextElementSibling.classList.add("active")
+        }
 
-}, 6000)
+    }, 6000)
 
+}
 
 
 // const $images = $('.img-display img');

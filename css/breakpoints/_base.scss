@@ -14,7 +14,8 @@ img {
     max-width: 90%;
     max-height: 70%;
     vertical-align: bottom;
-    aspect-ratio: 4 / 5;
+    
+    // aspect-ratio: 4 / 5;
 }
 
 a {
@@ -167,16 +168,17 @@ li {
 }
 
 .img-display {
+    
     position: absolute;
     overflow: hidden;
-    width: 100%;
+    width: 70%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    object-fit: contain;
 
     &::before {
+        
         animation: img-wrap 6s forwards infinite;
         // animation-delay: 1s;
         background-color: black;
@@ -191,6 +193,8 @@ li {
     }
 
     & > img {
+        object-fit: contain;
+        position: absolute;
         overflow: hidden;
         cursor: pointer;
         display: none;
@@ -223,7 +227,7 @@ li {
 }
 
 @keyframes img-wrap {
-    50% {
+    60% {
         transform: translateY(100%);
     }
 
