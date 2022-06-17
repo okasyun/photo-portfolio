@@ -163,7 +163,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px auto 0;
+    margin: 5px auto 0;
 }
 
 .img-display {
@@ -175,9 +175,8 @@ li {
     justify-content: center;
     align-items: center;
     object-fit: contain;
-    margin: 0 auto;
 
-    &:before {
+    &::before {
         animation: img-wrap 6s forwards infinite;
         // animation-delay: 1s;
         background-color: black;
