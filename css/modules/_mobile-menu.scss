@@ -67,6 +67,8 @@ $cMenuOpen: $cWhite;
 
         & > a {
             @extend .link;
+            letter-spacing: 5px !important;
+            font-size: 20px;
 
             &:hover {
                     color: red;
