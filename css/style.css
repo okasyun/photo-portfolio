@@ -261,7 +261,7 @@ li {
   align-items: center;
   -o-object-fit: contain;
      object-fit: contain;
-  margin: 0 auto;
+  margin: 30px auto 0;
 }
 .img-display:before {
   -webkit-animation: img-wrap 6s forwards infinite;
