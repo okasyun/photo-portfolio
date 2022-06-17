@@ -260,7 +260,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 40px;
+  margin: 0 auto 55px;
 }
 .img-display::before {
   -webkit-animation: img-wrap 6s forwards infinite;
