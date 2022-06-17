@@ -37,11 +37,10 @@ window.onload = function () {
     let num = 0;
     console.log(images);
 
-    setInterval(() => {
-        // const ran_num = Math.floor(Math.random() * images.length);
-        // const array = Array.from(images);
-        // const word = array.splice(ran_num,1)[0];
-        // console.log(word);
+    const element = document.querySelector(".img-display__show");
+    element.addEventListener('animationiteration', slide_animate);
+
+    function slide_animate() {
         num++;
         const image = document.querySelector(".img-display .active")
         image.classList.remove("active")
@@ -52,33 +51,6 @@ window.onload = function () {
         else {
             image.nextElementSibling.classList.add("active")
         }
-
-    }, 6000)
+    }
 
 }
-
-
-// const $images = $('.img-display img');
-// console.log($images.length);
-// console.log($images)
-
-// let num = 1;
-// setInterval(() => {
-//     num++;
-//     const $image = $('.img-display .active');
-//     $('.img-display .active').removeClass('active');
-
-//     if (num >= $images.length) {
-//         $images.item(0).addClass("active");
-//         num = 1;
-//     }
-//     else {
-//     $image.next().addClass('active');
-//     }
-// }, 5000);
-
-// queryselectorallで全画像取得
-// ランダムメソッドでランダムに数を取得
-// そのランダム数に一致するインデックスの画像にactiveつける
-
-// 時間関数でactive除去して次の要素に追加する
