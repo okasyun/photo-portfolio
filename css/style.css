@@ -251,6 +251,8 @@ li {
 }
 
 .img-display {
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   overflow: hidden;
   width: 70%;
