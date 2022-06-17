@@ -163,7 +163,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 80px auto 0;
+    margin: 0 auto;
 }
 
 .img-display {
@@ -177,15 +177,33 @@ li {
     object-fit: contain;
     margin: 0 auto;
 
+    &:before {
+        animation: img-wrap 6s forwards infinite;
+        // animation-delay: 1s;
+        background-color: black;
+        bottom: 0;
+        content: '';
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+
     & > img {
         overflow: hidden;
+        // z-index: 500;
         cursor: pointer;
         // visibility: hidden;
         display: none;
         &.active {
-            animation-name: img-animate;
-            animation-duration: 1s;
-            // visibility: visible;
+            // animation: img-wrap 2s cubic-bezier(.4, 0, .2, 1) forwards;
+            // animation-name: img-animate;
+            // animation-duration: 2s;
+            // animation-fill-mode: forwards;
+            // animation-timing-function: ease;
+            // // visibility: visible;
             display: block;
             // max-width: 90%;
             // max-height: 70%;
@@ -206,6 +224,17 @@ li {
 
     100% {
         opacity: 1;
+
     }
     
+}
+
+@keyframes img-wrap {
+    50% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
 }

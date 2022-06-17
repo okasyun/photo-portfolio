@@ -52,7 +52,7 @@ setInterval(() => {
         image.nextElementSibling.classList.add("active")
     }
 
-}, 5000)
+}, 6000)
 
 
 
