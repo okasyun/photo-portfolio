@@ -14,7 +14,7 @@ Stylesheet: 変数リスト
   height: 100vh;
   z-index: -1;
   opacity: 0;
-  background-color: black;
+  background-color: #111;
   transition: all 0.5s;
 }
 .mobile-menu__btn {
@@ -112,21 +112,29 @@ Stylesheet: 変数リスト
 
 @-webkit-keyframes menu-animate {
   0% {
+    transform: translateY(30px);
     opacity: 0;
+  }
+  80% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
-    transform: translateY(-15px);
+    transform: translateY(0);
   }
 }
 
 @keyframes menu-animate {
   0% {
+    transform: translateY(30px);
     opacity: 0;
+  }
+  80% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
-    transform: translateY(-15px);
+    transform: translateY(0);
   }
 }
 /******************************************************************
@@ -139,7 +147,7 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: #111;
   margin: 0;
   overflow: hidden;
 }
@@ -186,7 +194,7 @@ li {
 }
 
 #container {
-  background-color: black;
+  background-color: #111;
   position: relative;
 }
 
@@ -273,7 +281,7 @@ li {
 .img-display__show {
   -webkit-animation: img-wrap 10s forwards infinite;
           animation: img-wrap 10s forwards infinite;
-  background-color: black;
+  background-color: #111;
   bottom: 0;
   left: 0;
   pointer-events: none;
