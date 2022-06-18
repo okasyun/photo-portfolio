@@ -75,6 +75,7 @@ $cMenuOpen: $cWhite;
         }
 
         &.current > a {
+            pointer-events: none;
             color: #b7b3b3;
 
         }

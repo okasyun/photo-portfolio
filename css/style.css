@@ -64,6 +64,7 @@ Stylesheet: 変数リスト
   color: #b7b3b3;
 }
 .mobile-menu__item.current > a {
+  pointer-events: none;
   color: #b7b3b3;
 }
 .mobile-menu__icon {
