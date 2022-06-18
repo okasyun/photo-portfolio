@@ -58,18 +58,13 @@ Stylesheet: 変数リスト
 .mobile-menu__item > a {
   letter-spacing: 5px !important;
   font-size: 20px;
+  transition: all 0.5s;
 }
 .mobile-menu__item > a:hover {
-  color: red;
-}
-.mobile-menu__item > a:hover::after {
-  transform: scale(1, 1);
+  color: #b7b3b3;
 }
 .mobile-menu__item.current > a {
-  color: red;
-}
-.mobile-menu__item.current > a::after {
-  transform: scale(1, 1);
+  color: #b7b3b3;
 }
 .mobile-menu__icon {
   padding: 0;
@@ -80,10 +75,7 @@ Stylesheet: 変数リスト
   flex-direction: row;
 }
 .mobile-menu__social-item > a:hover {
-  color: red;
-}
-.mobile-menu__social-item > a:hover::after {
-  transform: scale(1, 1);
+  color: #b7b3b3;
 }
 
 .menu-open.mobile-menu {
@@ -173,24 +165,11 @@ li {
   max-width: 1070px;
 }
 
-.link, .header__li-icon > a, .header__li > a, .mobile-menu__item > a, .mobile-menu__social-item > a {
+.link, .header__li, .mobile-menu__item > a, .mobile-menu__social-item > a {
   position: relative;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.5s;
-}
-
-.red-line, .header__li > a::after, .mobile-menu__item > a::after {
-  content: "";
-  position: absolute;
-  bottom: -7px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: red;
-  transition: all 0.2s;
-  transform: scale(0, 1);
-  transform-origin: center top;
 }
 
 #container {
@@ -220,17 +199,15 @@ li {
 .header__li {
   margin-left: 20px;
 }
-.header__li > a:hover {
-  color: red;
+.header__li > a {
+  transition: all 0.5s;
 }
-.header__li > a:hover::after {
-  transform: scale(1, 1);
+.header__li > a:hover {
+  color: #b7b3b3;
 }
 .header__li.current > a {
-  color: red;
-}
-.header__li.current > a::after {
-  transform: scale(1, 1);
+  pointer-events: none;
+  color: #b7b3b3;
 }
 .header__li-icon {
   margin-left: 20px;
@@ -238,11 +215,11 @@ li {
 .header__li-icon:last-child {
   margin-right: 20px;
 }
-.header__li-icon > a:hover {
-  color: red;
+.header__li-icon > a {
+  transition: all 0.5s;
 }
-.header__li-icon > a:hover::after {
-  transform: scale(1, 1);
+.header__li-icon > a:hover {
+  color: #b7b3b3;
 }
 .header .logo {
   font-size: 25px;

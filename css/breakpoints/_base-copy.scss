@@ -24,6 +24,7 @@ img {
     max-width: 90%;
     max-height: 70%;
     vertical-align: bottom;
+    
     // aspect-ratio: 4 / 5;
 }
 
@@ -35,7 +36,6 @@ a {
 li {
     list-style: none;
 }
-
 
 .content-width {
     width: 95%;
@@ -50,7 +50,22 @@ li {
     transition: all 0.5s;
 }
 
-
+.red-line {
+    content: '';
+    // 絶対配置で線の位置を決める
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    // 線の形状
+    width: 100%;
+    height: 1px;
+    background: red;
+    // アニメーションの指定
+    transition: all .2s;
+    transform: scale(0, 1);
+    // 上部中央起点
+    transform-origin: center top;
+}
 
 #container {
     background-color: $cBlack;
@@ -79,20 +94,36 @@ li {
     }
 
     &__li {
-        @extend .link;
+        // インスタアイコンだけ線削除したい
         margin-left: 20px;
 
+        
+
         & > a {
-            transition: all .5s;
+            @extend .link;
+            
             &:hover {
-                color: #b7b3b3;
+                // color: #aaaもあり
+                color: red;
+                &::after {
+                    // X方向にスケール拡大
+                    transform: scale(1, 1);
+                }
+            }
+
+            &::after {
+                @extend .red-line;
             }
         }
 
         &.current > a {
             pointer-events: none;
-            color: #b7b3b3;
+            color: red;
 
+            &::after {
+                // X方向にスケール拡大
+                transform: scale(1, 1);
+            }
         }
     }
 
@@ -104,10 +135,15 @@ li {
         }
 
         & > a {
-            transition: all .5s;
+            @extend .link;
+
             &:hover {
-             
-                color: #b7b3b3;
+                color: red;
+
+                &::after {
+                    // X方向にスケール拡大
+                    transform: scale(1, 1);
+                }
             }
         }
     }
