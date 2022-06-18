@@ -130,6 +130,60 @@ Stylesheet: 変数リスト
     transform: translateY(0);
   }
 }
+/*==================================================
+ギャラリーのためのcss
+===================================*/
+#gallery-content {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 80px auto !important;
+}
+
+.gallery-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.gallery {
+  -moz-columns: 4;
+       columns: 4;
+  padding: 0;
+  margin: 0;
+  /*段組みの数*/
+  /*ギャラリー左右に余白をつける*/
+}
+
+.gallery li {
+  margin-bottom: 20px;
+  /*各画像下に余白をつける*/
+}
+
+/*ギャラリー内のイメージは横幅100%にする*/
+.gallery img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+  /*画像の下にできる余白を削除*/
+}
+
+/*　横幅900px以下の段組み設定　*/
+@media only screen and (max-width: 900px) {
+  .gallery {
+    -moz-columns: 3;
+         columns: 3;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .gallery {
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -142,7 +196,6 @@ html {
 body {
   background-color: #111;
   margin: 0;
-  overflow: hidden;
 }
 
 img {
@@ -160,7 +213,7 @@ li {
   list-style: none;
 }
 
-.content-width, .footer, #main-content, .header__inner {
+.content-width, .footer, #main-content, .header__inner, #gallery-content {
   width: 95%;
   margin: 0 auto;
   max-width: 1070px;
@@ -212,9 +265,6 @@ li {
 }
 .header__li-icon {
   margin-left: 20px;
-}
-.header__li-icon:last-child {
-  margin-right: 20px;
 }
 .header__li-icon > a {
   transition: all 0.5s;
