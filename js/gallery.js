@@ -1,9 +1,26 @@
 //lightbox オプションの設定※https://lokeshdhakar.com/projects/lightbox2/#options参照
 
 // lightbox.option({
-//   'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
-//   'albumLabel': ' %1 / total %2 '//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
+//     'resizeDuration': 200,
+//     'wrapAround': true
 // })
+
+// $(function () {
+//   lightbox.option({
+//     'alwaysShowNavOnTouchDevices': false,
+//     'albumLabel': 'ギャラリー： %1 of %2',
+//     'disableScrolling': true,
+//     'fadeDuration': 600,
+//     'fitImagesInViewport': true,
+//     'imageFadeDuration': 600,
+//     'maxWidth': 400,
+//     'maxHeight': 400,
+//     'positionFromTop': 50,
+//     'resizeDuration': 700,
+//     'showImageNumberLabel': true,
+//     'wrapAround': false,
+//   });
+// });
 
 //ふわっと見せるためのJS。3-5-3 ページが読み込まれたらすぐに動かしたい&画面をスクロールをしたら動かしたい場合内のソースコード使用
 
