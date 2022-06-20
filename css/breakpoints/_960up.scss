@@ -19,5 +19,8 @@ Stylesheet: 960px以上のモニタで適用
 
 
 .gallery {
-    columns: 3;
+    columns: 4;
+    & > li {
+        margin: 0 0 30px;
+    }
 }

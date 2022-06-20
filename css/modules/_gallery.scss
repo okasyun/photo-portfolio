@@ -4,11 +4,15 @@
 ギャラリーのためのcss
 ===================================*/
 
-// スクロールしても固定されるheader
+// スクロールしても固定されるfooter other works
 // トップに戻るボタン後半から
 // headerを途中まで表示してしばらくしたら消す、再び上に行ったら再度表示
 // 画像アニメーションで表示
-
+// header-logoを透明にする。nth-childで名前と苗字の間にmargin
+// worksをスライドでジャンル表示
+// headerと画像の位置を揃える
+// アニメーションスマホだとエラー
+// スマホmargin-bottom少し大きくする
 #gallery-content {
     @extend .content-width;
     position: relative;
@@ -32,21 +36,17 @@
     & > li {
         text-align: center;
         // 画像を中心に寄せる
-        margin-bottom: 20px;
+        margin-bottom: 80px;
         /*各画像下に余白をつける*/
-
     }
 }
 
-.gallery li {
-}
 
 /*ギャラリー内のイメージは横幅100%にする*/
 .gallery img {
     width: 100%;
     height: 100%;
     vertical-align: bottom;
-    margin: 0 auto;
     /*画像の下にできる余白を削除*/
 }
 
