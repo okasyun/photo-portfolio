@@ -43,9 +43,15 @@
                                         </button>
                 </div>
             </header>
+            <!-- <div class="cover-slide hover-darken inview">
+                        <div class="bg-img-zoom img-bg50"></div>
+                      </div> -->
             <main id="gallery-content">
                 <div class="gallery-display">
                     <ul class="gallery">
+                        <li class="cover-slide inview hover-darken">
+                            <a href="images/image-1.jpg" data-lightbox="gallery1"><img class="img-zoom" src="images/image-1.jpg" alt=""><a/>
+                        </li>
                         <li><a href="images/image-1.jpg" data-lightbox="gallery1" data-title="ohayo"><img src="images/image-1.jpg" alt=""></a></li>
                         <li><a href="images/image-2.jpg" data-lightbox="gallery1"><img src="images/image-2.jpg" alt=""></a></li>
                         <li><a href="images/image-3.jpg" data-lightbox="gallery1"><img src="images/image-3.jpg" alt=""></a></li>
@@ -153,12 +159,17 @@
             </ul>
         </ul>
     </nav>
-    
+    <!-- <div class="animate-title">Animation Title</div> -->
+    <script src="scripts/vendors/scroll-polyfill.js"></script>
+    <script src="scripts/vendors/TweenMax.min.js"></script>
+    <script src="scripts/libs/scroll.js"></script>
+    <script src="scripts/libs/text-animation.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/menu-open.js"></script>
+    <script src="scripts/gallery.js"></script>
+    <script src="scripts/menu-open.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="scripts/works.js"></script>
     <script>
         lightbox.option({
             'resizeDuration': 200,
