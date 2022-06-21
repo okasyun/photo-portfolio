@@ -21,7 +21,7 @@ Stylesheet: 960px以上のモニタで適用
 .gallery {
     columns: 4;
     column-gap: 50px;
-    // & > li {
-    //     margin: 0 0 50px;
-    // }
+    & > li {
+        margin: 0 0 50px;
+    }
 }

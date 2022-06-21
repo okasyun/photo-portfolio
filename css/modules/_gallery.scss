@@ -13,6 +13,12 @@
 // headerと画像の位置を揃える
 // アニメーションスマホだとエラー
 // スマホmargin-bottom少し大きくする
+// 写真ホバー時透明にする
+// aboutテキストアニメーション上に移動する感じ
+// ページ遷移滑らかなアニメーション
+// contactヨシダナギ
+
+// 下から上だとアニメーション発動しない
 #gallery-content {
     @extend .content-width;
     position: relative;
@@ -34,32 +40,26 @@
 .gallery {
     columns: 1;
     & > li {
+        position: relative;
         text-align: center;
         // 画像を中心に寄せる
         margin: 0 0 80px;
         /*各画像下に余白をつける*/
-        // :hover {
-        //     border: solid 10px red;
+        // &::before {
+        //     content: "";
+        //     animation-name: img-animate;
+        //     animation-duration: 1s;
+        //     animation-fill-mode: forwards;
+        //     background-color: $cBlack;
+        //     z-index: 100;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
         // }
         & > a{
             position: relative;
-            // &::before {
-            //     animation-name: img-animate;
-            //     animation-duration: 10s;
-            //     animation-fill-mode: forwards;
-            //     // perspective-origin: left center;
-            //     content: '';
-            //     top: 0;
-            //     left: 0;
-            //     right: 0;
-            //     bottom: 0;
-            //     position: absolute;
-            //     z-index: 50;
-            //     background-color: #111;
-            // }
-            // :hover {
-            //         border: solid 10px red;
-            //     }
             display: block;
         }
     }
@@ -74,6 +74,21 @@
     /*画像の下にできる余白を削除*/
 }
 
+li.flipLeft {
+    &::before {
+            content: "";
+            animation-name: img-animate;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+            background-color: $cBlack;
+            z-index: 100;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+}
 
 ul {
     margin: 0;
@@ -126,11 +141,13 @@ p {
 }
 
 @keyframes img-animate {
-    0% {
+    0% {transform-origin: bottom;
+        transform: scaleY(1);
         // transform: translateY(0px);
     }
     100% {
-        transform: translateY(100%)
+        transform-origin: bottom;
+        transform: scaleY(0);
     }
     
 }
