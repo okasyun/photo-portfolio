@@ -43,20 +43,20 @@
         // }
         & > a{
             position: relative;
-            &::before {
-                animation-name: img-animate;
-                animation-duration: 10s;
-                animation-fill-mode: forwards;
-                // perspective-origin: left center;
-                content: '';
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                position: absolute;
-                z-index: 50;
-                background-color: #111;
-            }
+            // &::before {
+            //     animation-name: img-animate;
+            //     animation-duration: 10s;
+            //     animation-fill-mode: forwards;
+            //     // perspective-origin: left center;
+            //     content: '';
+            //     top: 0;
+            //     left: 0;
+            //     right: 0;
+            //     bottom: 0;
+            //     position: absolute;
+            //     z-index: 50;
+            //     background-color: #111;
+            // }
             // :hover {
             //         border: solid 10px red;
             //     }
@@ -105,13 +105,13 @@ p {
 
 /*画像を出現させるアニメーションCSS*/
 
-.flipLeft {
-    animation-name: flipLeft;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    perspective-origin: left center;
-    opacity: 0;
-}
+// .flipLeft {
+//     animation-name: flipLeft;
+//     animation-duration: 0.5s;
+//     animation-fill-mode: forwards;
+//     perspective-origin: left center;
+//     opacity: 0;
+// }
 
 @keyframes flipLeft {
     from {

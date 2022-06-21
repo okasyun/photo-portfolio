@@ -162,22 +162,6 @@ Stylesheet: 変数リスト
   position: relative;
   display: block;
 }
-.gallery > li > a::before {
-  -webkit-animation-name: img-animate;
-          animation-name: img-animate;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  z-index: 50;
-  background-color: #111;
-}
 
 /*ギャラリー内のイメージは横幅100%にする*/
 .gallery img {
@@ -216,17 +200,6 @@ p {
 }
 
 /*画像を出現させるアニメーションCSS*/
-.flipLeft {
-  -webkit-animation-name: flipLeft;
-          animation-name: flipLeft;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  perspective-origin: left center;
-  opacity: 0;
-}
-
 @-webkit-keyframes flipLeft {
   from {
     transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
@@ -237,7 +210,6 @@ p {
     opacity: 1;
   }
 }
-
 @keyframes flipLeft {
   from {
     transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
