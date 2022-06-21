@@ -36,8 +36,32 @@
     & > li {
         text-align: center;
         // 画像を中心に寄せる
-        margin-bottom: 80px;
+        margin: 0 0 80px;
         /*各画像下に余白をつける*/
+        // :hover {
+        //     border: solid 10px red;
+        // }
+        & > a{
+            position: relative;
+            &::before {
+                animation-name: img-animate;
+                animation-duration: 10s;
+                animation-fill-mode: forwards;
+                // perspective-origin: left center;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                z-index: 50;
+                background-color: #111;
+            }
+            // :hover {
+            //         border: solid 10px red;
+            //     }
+            display: block;
+        }
     }
 }
 
@@ -99,4 +123,14 @@ p {
         transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
         opacity: 1;
     }
+}
+
+@keyframes img-animate {
+    0% {
+        // transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(100%)
+    }
+    
 }

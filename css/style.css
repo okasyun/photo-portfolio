@@ -155,8 +155,28 @@ Stylesheet: 変数リスト
 }
 .gallery > li {
   text-align: center;
-  margin-bottom: 80px;
+  margin: 0 0 80px;
   /*各画像下に余白をつける*/
+}
+.gallery > li > a {
+  position: relative;
+  display: block;
+}
+.gallery > li > a::before {
+  -webkit-animation-name: img-animate;
+          animation-name: img-animate;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 50;
+  background-color: #111;
 }
 
 /*ギャラリー内のイメージは横幅100%にする*/
@@ -228,6 +248,16 @@ p {
     opacity: 1;
   }
 }
+@-webkit-keyframes img-animate {
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes img-animate {
+  100% {
+    transform: translateY(100%);
+  }
+}
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -260,7 +290,7 @@ li {
 .content-width, .footer, #main-content, .header__inner, #gallery-content {
   width: 95%;
   margin: 0 auto;
-  max-width: 1070px;
+  max-width: 1100px;
 }
 
 .link, .header__li, .mobile-menu__item > a, .mobile-menu__social-item > a {
@@ -400,9 +430,8 @@ li {
   .gallery {
     -moz-columns: 3;
          columns: 3;
-  }
-  .gallery > li {
-    margin: 0 0 30px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
 }
 @media (min-width: 960px) {
@@ -425,9 +454,8 @@ li {
   .gallery {
     -moz-columns: 4;
          columns: 4;
-  }
-  .gallery > li {
-    margin: 0 0 30px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
   }
 }
 @media (min-width: 1280px) {
@@ -450,8 +478,7 @@ li {
   .gallery {
     -moz-columns: 4;
          columns: 4;
-  }
-  .gallery > li {
-    margin: 0 0 30px;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
   }
 }/*# sourceMappingURL=style.css.map */
