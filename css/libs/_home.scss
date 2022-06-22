@@ -1,14 +1,17 @@
 #main-content-home {
+    padding-top: $navHeight;
+    position: relative;
     overflow: hidden;
     top: 0;
     left: 0;
-    display: flex;
+    // display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     display: block;
     width: 100%;
-    height: 100vh;
-    margin: $navHeight auto;
+    height: 90vh;
+    // margin: $navHeight auto;
 
 }
 
@@ -21,7 +24,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 55px;
 
     &__show {
         animation: img-wrap 10s forwards infinite;
