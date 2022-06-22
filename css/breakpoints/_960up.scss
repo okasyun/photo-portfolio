@@ -19,6 +19,7 @@ Stylesheet: 960px以上のモニタで適用
 
 
 .gallery {
+    vertical-align: center;
     columns: 4;
     column-gap: 50px;
     & > li {
