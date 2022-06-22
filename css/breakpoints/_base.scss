@@ -30,6 +30,7 @@ img {
 a {
     text-decoration: none !important;
     color: $cWhite;
+    display: block;
 }
 
 li {
@@ -80,8 +81,8 @@ li {
 
     &__li {
         @extend .link;
+        position: relative;
         margin-left: 20px;
-
         & > a {
             transition: all .5s;
             &:hover {
@@ -115,6 +116,10 @@ li {
     & .logo {
         font-size: 25px;
         justify-content: center;
+        transition: all .5s;
+        &:hover {
+            color: #b7b3b3;;
+        }
     }
 
     &__nav {
@@ -135,63 +140,20 @@ li {
     @extend .content-width;
     position: relative;
     // margin-top: $navHeight;
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
 
-.img-display {
-    object-fit: contain;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 55px;
-
-    &__show {
-        animation: img-wrap 10s forwards infinite;
-        background-color: $cBlack;
-        bottom: 0;
-        left: 0;
-        pointer-events: none;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 100;
-    }
-
-    & > img {
-        object-fit: contain;
-        position: absolute;
-        overflow: hidden;
-        cursor: pointer;
-        display: none;
-
-        &.active {
-            display: block;
-        }
-    }
-}
 
 .footer {
-    @extend .content-width;
-}
-
-@keyframes img-wrap {
-    0% {
-
-    }
-
-    50% {
-        transform: translateY(100%);
-    }
-
-    100% {
-        transform: translateY(100%);
-    }
+    position: fixed;
+    background-color: $cBlack;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: $navHeight;
 }

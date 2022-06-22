@@ -6,9 +6,9 @@
 
 // スクロールしても固定されるfooter other works
 // トップに戻るボタン後半から
+// 写真綺麗に揃える
 // headerを途中まで表示してしばらくしたら消す、再び上に行ったら再度表示
 // 画像アニメーションで表示
-// header-logoを透明にする。nth-childで名前と苗字の間にmargin
 // worksをスライドでジャンル表示
 // headerと画像の位置を揃える
 // アニメーションスマホだとエラー
@@ -19,10 +19,11 @@
 // contactヨシダナギ
 
 // 下から上だとアニメーション発動しない
+
+
 #gallery-content {
     @extend .content-width;
     position: relative;
-    height: 100vh;
     display: block;
     justify-content: center;
     // align-items: center;
@@ -30,11 +31,11 @@
 }
 
 .gallery-display {
-    position: absolute;
+    position: relative;
     top:0;
     left:0;
     right:0;
-    bottom:0;
+    margin: 0 auto;
 }
 
 .gallery {
@@ -64,8 +65,6 @@
         }
     }
 }
-
-
 /*ギャラリー内のイメージは横幅100%にする*/
 // .gallery img {
 //     width: 100%;
@@ -75,8 +74,8 @@
 // }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
+    // max-width: 100%;
+    // max-height: 100%;
     width: 100%;
     height: 100%;
     vertical-align: bottom;

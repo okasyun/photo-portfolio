@@ -5,6 +5,8 @@
 // btn.addEventListener("click", () => {
 //     mobile_menu.classList.toggle('menu-open');
 // });
+
+
 // header_current.addEventListener("click", () => header_current.classList.toggle('current'));
 // mobile_current.addEventListener("click", () => mobile_current.classList.toggle('current'));
 

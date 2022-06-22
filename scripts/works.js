@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const cb = function (el, inview) {
@@ -6,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
             ta.animate();
         }
     }
+
+    
 
     const so = new ScrollObserver('.tween-animate-title', cb);
 

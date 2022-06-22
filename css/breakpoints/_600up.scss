@@ -6,7 +6,7 @@ Stylesheet: 960px以上のモニタで適用
 
 // 600-960pxだとロゴが崩れる
 .gallery {
-    columns: 3;
+    columns: 2;
     column-gap: 30px;
     & > li {
         margin: 0 0 30px;
