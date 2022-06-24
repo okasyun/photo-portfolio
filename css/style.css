@@ -405,7 +405,7 @@ html {
      object-fit: contain;
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
   height: 90%;
   margin: 30px auto;
   display: flex;
