@@ -3,19 +3,6 @@ html {
     height: 100vh;
 }
 
-
-.slider {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: contain;
-    position: absolute;
-    overflow: hidden;
-    cursor: pointer;
-    // display: none;
-}
-
 #main-content-home {
     margin-top: $navHeight;
     position: relative;
@@ -45,22 +32,24 @@ html {
     align-items: center;
 
     & > a {
+        z-index: 10000;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        position: absolute;
         display: block;
         cursor: pointer;
-        // right: 0;
-        // bottom: 0;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
+        right: 0;
     }
 
     &__show {
+        position: relative;
         animation: img-wrap 10s forwards infinite;
         background-color: $cBlack;
         bottom: 0;
         left: 0;
         margin: 0 auto;
-        width: 70%;
+        width: 100%;
         height: 100%;
         pointer-events: none;
         position: absolute;
@@ -69,7 +58,7 @@ html {
         z-index: 100;
     }
 
-    & > img {
+    img {
         top:0;
         left:0;
         right:0;
@@ -103,13 +92,4 @@ html {
         transform-origin: bottom;
         transform: scaleY(0);
     }
-    // 0% {}
-
-    // 50% {
-    //     transform: translateY(100%);
-    // }
-
-    // 100% {
-    //     transform: translateY(100%);
-    // }
 }

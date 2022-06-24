@@ -374,18 +374,6 @@ html {
   height: 100vh;
 }
 
-.slider {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: absolute;
-  overflow: hidden;
-  cursor: pointer;
-}
-
 #main-content-home {
   margin-top: 80px;
   position: relative;
@@ -413,24 +401,31 @@ html {
   align-items: center;
 }
 .img-display > a {
+  z-index: 10000;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
   display: block;
   cursor: pointer;
+  right: 0;
 }
 .img-display__show {
+  position: relative;
   -webkit-animation: img-wrap 10s forwards infinite;
           animation: img-wrap 10s forwards infinite;
   background-color: #111;
   bottom: 0;
   left: 0;
   margin: 0 auto;
-  width: 70%;
+  width: 100%;
   height: 100%;
   pointer-events: none;
   position: absolute;
   right: 0;
   z-index: 100;
 }
-.img-display > img {
+.img-display img {
   top: 0;
   left: 0;
   right: 0;
@@ -442,7 +437,7 @@ html {
   cursor: pointer;
   display: none;
 }
-.img-display > img.active {
+.img-display img.active {
   display: block;
 }
 

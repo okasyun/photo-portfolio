@@ -9,7 +9,7 @@
 // mobile_current.addEventListener("click", () => mobile_current.classList.toggle('current'));
 
 window.onload = function () {
-    const images = document.querySelectorAll(".img-display img")
+    const images = document.querySelectorAll("img")
     let num = 0;
     console.log(images);
 
@@ -18,7 +18,7 @@ window.onload = function () {
 
     function slide_animate() {
         num++;
-        const image = document.querySelector(".img-display .active")
+        const image = document.querySelector("div .active")
         image.classList.remove("active")
         if (num >= images.length) {
             images[0].classList.add("active");
