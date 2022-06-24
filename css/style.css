@@ -9,12 +9,12 @@ Stylesheet: 変数リスト
   justify-content: center;
   position: fixed;
   align-items: center;
-  top: 0;
+  top: 80px;
   width: 100%;
   height: 100vh;
   z-index: -1;
   opacity: 0;
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   transition: all 0.5s;
 }
 .mobile-menu__btn {
@@ -46,7 +46,6 @@ Stylesheet: 変数リスト
   padding: 0;
   margin: 0;
   position: absolute;
-  z-index: 100;
 }
 .mobile-menu__item {
   text-align: center;
@@ -81,7 +80,7 @@ Stylesheet: 変数リスト
 }
 
 .menu-open.mobile-menu {
-  z-index: 100;
+  z-index: 10000000;
   opacity: 1;
 }
 .menu-open.mobile-menu__item, .menu-open.mobile-menu__icon {
@@ -319,7 +318,7 @@ Stylesheet: 変数リスト
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   opacity: 0;
 }
 .cover-slide.inview::after {
@@ -389,6 +388,7 @@ html {
 }
 
 .img-display {
+  z-index: 10000;
   -o-object-fit: contain;
      object-fit: contain;
   position: relative;
@@ -399,6 +399,18 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.img-display:hover {
+  background-color: rgb(25, 25, 25);
+}
+.img-display > .title {
+  letter-spacing: 2px;
+  color: white;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  bottom: 20px;
 }
 .img-display > a {
   z-index: 10000;
@@ -414,7 +426,7 @@ html {
   position: relative;
   -webkit-animation: img-wrap 10s forwards infinite;
           animation: img-wrap 10s forwards infinite;
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   bottom: 0;
   left: 0;
   margin: 0 auto;
@@ -426,6 +438,8 @@ html {
   z-index: 100;
 }
 .img-display img {
+  margin: auto;
+  height: 80%;
   top: 0;
   left: 0;
   right: 0;
@@ -589,7 +603,7 @@ html {
 }
 
 body {
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   margin: 0;
 }
 
@@ -625,7 +639,7 @@ li {
 }
 
 #container {
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   position: relative;
 }
 
@@ -639,7 +653,7 @@ li {
   color: white;
   display: flex;
   align-items: center;
-  z-index: 1000;
+  z-index: 100000;
 }
 .header__ul {
   display: flex;
@@ -698,7 +712,7 @@ li {
 
 .footer {
   position: fixed;
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   bottom: 0;
   left: 0;
   width: 100%;

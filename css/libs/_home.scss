@@ -21,6 +21,7 @@ html {
 }
 
 .img-display {
+    z-index: 10000;
     object-fit: contain;
     position: relative;
     overflow: hidden;
@@ -30,6 +31,19 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .5s ease-in-out;
+    &:hover {
+        background-color: rgba(25, 25, 25, 1);
+    }
+
+    & > .title {
+        letter-spacing: 2px;
+        color: $cWhite;
+        position: absolute;
+        display: block;
+        margin: 0 auto;
+        bottom: 20px;
+    }
 
     & > a {
         z-index: 10000;
@@ -59,8 +73,10 @@ html {
     }
 
     img {
+        margin: auto;
+        height: 80%;
         top:0;
-        left:0;
+        left: 0;
         right:0;
         bottom:0;
         object-fit: contain;
