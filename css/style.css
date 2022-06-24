@@ -394,7 +394,7 @@ html {
   position: relative;
   overflow: hidden;
   width: 90%;
-  height: 90%;
+  height: 80%;
   margin: 30px auto;
   display: flex;
   justify-content: center;
@@ -410,7 +410,7 @@ html {
   position: absolute;
   display: block;
   margin: 0 auto;
-  bottom: 20px;
+  bottom: 10px;
 }
 .img-display > a {
   z-index: 10000;
@@ -744,6 +744,13 @@ li {
     display: block;
   }
 
+  .img-display {
+    height: 90%;
+  }
+  .img-display > .title {
+    bottom: 30px;
+  }
+
   .mobile-menu, .mobile-menu__btn {
     display: none;
   }
@@ -764,6 +771,13 @@ li {
   }
   .header__nav {
     display: block;
+  }
+
+  .img-display {
+    height: 90%;
+  }
+  .img-display > .title {
+    bottom: 30px;
   }
 
   .mobile-menu, .mobile-menu__btn {

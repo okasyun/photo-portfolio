@@ -26,7 +26,7 @@ html {
     position: relative;
     overflow: hidden;
     width: 90%;
-    height: 90%;
+    height: 80%;
     margin: 30px auto;
     display: flex;
     justify-content: center;
@@ -42,7 +42,7 @@ html {
         position: absolute;
         display: block;
         margin: 0 auto;
-        bottom: 20px;
+        bottom: 10px;
     }
 
     & > a {
