@@ -410,7 +410,7 @@ html {
   position: absolute;
   display: block;
   margin: 0 auto;
-  bottom: 10px;
+  bottom: 20px;
 }
 .img-display > a {
   z-index: 10000;
