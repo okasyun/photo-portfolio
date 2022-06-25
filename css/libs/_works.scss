@@ -150,11 +150,11 @@ p {
 }
 
 @keyframes img-animate {
-    0% {transform-origin: bottom;
+    from {transform-origin: bottom;
         transform: scaleY(1);
         // transform: translateY(0px);
     }
-    100% {
+    to {
         transform-origin: bottom;
         transform: scaleY(0);
     }

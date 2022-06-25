@@ -369,6 +369,77 @@ Stylesheet: 変数リスト
   opacity: 0.4;
 }
 
+#page-top {
+  z-index: 10000;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+}
+#page-top > a {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 5px;
+  transition: all 0.3s;
+}
+#page-top > a:hover {
+  background-color: blue;
+}
+#page-top.UpMove {
+  -webkit-animation: Upanime 0.5s forwards;
+          animation: Upanime 0.5s forwards;
+}
+#page-top.DownMove {
+  -webkit-animation: DownAnime 0.5s, forwards;
+          animation: DownAnime 0.5s, forwards;
+}
+
+@-webkit-keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: trnslateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: trnslateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
 html {
   height: 100vh;
 }
@@ -575,21 +646,21 @@ p {
   }
 }
 @-webkit-keyframes img-animate {
-  0% {
+  from {
     transform-origin: bottom;
     transform: scaleY(1);
   }
-  100% {
+  to {
     transform-origin: bottom;
     transform: scaleY(0);
   }
 }
 @keyframes img-animate {
-  0% {
+  from {
     transform-origin: bottom;
     transform: scaleY(1);
   }
-  100% {
+  to {
     transform-origin: bottom;
     transform: scaleY(0);
   }
@@ -620,6 +691,7 @@ a {
   text-decoration: none !important;
   color: white;
   display: block;
+  text-align: center;
 }
 
 li {
@@ -749,7 +821,7 @@ li {
     height: 90%;
   }
   .img-display > .title {
-    bottom: 30px;
+    bottom: 2%;
   }
 
   .mobile-menu, .mobile-menu__btn {
@@ -778,7 +850,7 @@ li {
     height: 90%;
   }
   .img-display > .title {
-    bottom: 30px;
+    bottom: 2%;
   }
 
   .mobile-menu, .mobile-menu__btn {
