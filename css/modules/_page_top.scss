@@ -3,9 +3,10 @@
     position:fixed;
     right: 20px;
     bottom: 20px;
+
     
-    // opacity: 0;
-    // transform: translate(100px);
+    opacity: 0;
+    transform: translateY(100px);
 
     & > a {
         // width: 60px;
@@ -28,17 +29,18 @@
     
 
     &.UpMove {
-        animation: Upanime .5s forwards;
+        animation: UpAnime .5s forwards;
     }
     &.DownMove {
         animation: DownAnime .5s, forwards;
     }
 }
 
-
 .fa-arrow-up {
     font-size: 25px;
 }
+
+
 
 @keyframes UpAnime {
     from {

@@ -374,6 +374,8 @@ Stylesheet: 変数リスト
   position: fixed;
   right: 20px;
   bottom: 20px;
+  opacity: 0;
+  transform: translateY(100px);
 }
 #page-top > a {
   width: 60px;
@@ -390,8 +392,8 @@ Stylesheet: 変数リスト
   background-color: #2d3c64;
 }
 #page-top.UpMove {
-  -webkit-animation: Upanime 0.5s forwards;
-          animation: Upanime 0.5s forwards;
+  -webkit-animation: UpAnime 0.5s forwards;
+          animation: UpAnime 0.5s forwards;
 }
 #page-top.DownMove {
   -webkit-animation: DownAnime 0.5s, forwards;
