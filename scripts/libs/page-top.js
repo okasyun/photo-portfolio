@@ -1,14 +1,29 @@
 function  PageTopAnime() {
     const scroll = $(window).scrollTop();
-    if(scroll >= 500) {
+    const windowWidth = $(window).width();
+    const windowSm = 600;
+    console.log(scroll);
+    if (windowSm > windowWidth) {
+        if (scroll >= 4000) {
+            $('#page-top').removeClass('DownMove');
+            $('#page-top').addClass('UpMove');
+        }else{
+            if($('#page-top').hasClass('UpMove')){//すでに#page-topにUpMoveというクラス名がついていたら
+                $('#page-top').removeClass('UpMove');//UpMoveというクラス名を除き
+                $('#page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
+            }
+        }
+    }else{
+        if(scroll >= 1000) {
         $('#page-top').removeClass('DownMove');
         $('#page-top').addClass('UpMove');
-    }else{
-		if($('#page-top').hasClass('UpMove')){//すでに#page-topにUpMoveというクラス名がついていたら
-			$('#page-top').removeClass('UpMove');//UpMoveというクラス名を除き
-			$('#page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
-		}
-	}
+        }else{
+            if($('#page-top').hasClass('UpMove')){//すでに#page-topにUpMoveというクラス名がついていたら
+                $('#page-top').removeClass('UpMove');//UpMoveというクラス名を除き
+                $('#page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
+            }
+        }
+    }
 }
 
 $(window).scroll(function () {

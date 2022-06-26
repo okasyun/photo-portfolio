@@ -587,18 +587,9 @@ html {
   position: relative;
   text-align: center;
   margin: 0 0 20px;
-  /*各画像下に余白をつける*/
 }
 .gallery > li > a {
   position: relative;
-}
-
-/*ギャラリー内のイメージは横幅100%にする*/
-img {
-  width: 100%;
-  height: 100%;
-  vertical-align: bottom;
-  /*画像の下にできる余白を削除*/
 }
 
 ul {
@@ -629,27 +620,6 @@ p {
   word-wrap: break-word;
 }
 
-/*画像を出現させるアニメーションCSS*/
-@-webkit-keyframes flipLeft {
-  from {
-    transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
-    opacity: 0;
-  }
-  to {
-    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
-    opacity: 1;
-  }
-}
-@keyframes flipLeft {
-  from {
-    transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
-    opacity: 0;
-  }
-  to {
-    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
-    opacity: 1;
-  }
-}
 @-webkit-keyframes img-animate {
   from {
     transform-origin: bottom;
@@ -660,6 +630,7 @@ p {
     transform: scaleY(0);
   }
 }
+
 @keyframes img-animate {
   from {
     transform-origin: bottom;
