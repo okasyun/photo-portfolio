@@ -50,8 +50,13 @@
         & > a{
             position: relative;
             // display: block; liと同じ大きさにするk
+
+            & > img {
+                width: 90%;
+            }
         }
     }
+
 }
 
 
