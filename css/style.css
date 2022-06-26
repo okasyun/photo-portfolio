@@ -381,10 +381,9 @@ Stylesheet: 変数リスト
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(100, 100, 100, 0.7);
+  background-color: rgba(110, 110, 110, 0.8);
   opacity: 0.7;
   border-radius: 50%;
-  text-transform: uppercase;
   transition: all 0.3s;
 }
 #page-top > a:hover {
