@@ -84,12 +84,11 @@ $cMenuOpen: $cWhite;
         width: 100%;
         margin-top: 40px;
         display: flex;
-        justify-content: space-between;
-        flex-direction: row;
+        justify-content: center;
     }
 
     &__social-item {
-        // margin-left: 20px;
+        margin: 0 20px;
         & > a {
             @extend .link;
     

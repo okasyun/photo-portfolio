@@ -72,8 +72,10 @@ Stylesheet: 変数リスト
   width: 100%;
   margin-top: 40px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+  justify-content: center;
+}
+.mobile-menu__social-item {
+  margin: 0 20px;
 }
 .mobile-menu__social-item > a:hover {
   color: #b7b3b3;
@@ -449,7 +451,7 @@ html {
   height: 100vh;
 }
 
-#main-content-home {
+#main-content {
   margin-top: 80px;
   position: relative;
   overflow: hidden;
@@ -592,7 +594,7 @@ html {
   position: relative;
 }
 .gallery > li > a > img {
-  width: 90%;
+  width: 95%;
 }
 
 ul {
@@ -671,13 +673,14 @@ a {
   color: white;
   display: block;
   text-align: center;
+  cursor: pointer;
 }
 
 li {
   list-style: none;
 }
 
-.content-width, #main-content, .header__inner, #gallery-content {
+.content-width, .header__inner, #gallery-content {
   width: 95%;
   margin: 0 auto;
   max-width: 1300px;
@@ -701,49 +704,10 @@ li {
   left: 0;
   width: 100%;
   height: 80px;
-  background-color: transpaent;
   color: white;
   display: flex;
   align-items: center;
   z-index: 100000;
-}
-.header__ul {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.header__li {
-  position: relative;
-  margin-left: 20px;
-}
-.header__li > a {
-  transition: all 0.5s;
-}
-.header__li > a:hover {
-  color: #b7b3b3;
-}
-.header__li.current > a {
-  pointer-events: none;
-  color: #b7b3b3;
-}
-.header__li-icon {
-  margin-left: 20px;
-}
-.header__li-icon > a {
-  transition: all 0.5s;
-}
-.header__li-icon > a:hover {
-  color: #b7b3b3;
-}
-.header .logo {
-  font-size: 25px;
-  justify-content: center;
-  transition: all 0.5s;
-}
-.header .logo:hover {
-  color: #b7b3b3;
 }
 .header__nav {
   display: none;
@@ -753,13 +717,80 @@ li {
   justify-content: center;
   align-items: center;
 }
-
-#main-content {
-  position: relative;
+.header__ul {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.header__ul-child {
+  display: block;
+  background-color: orange;
+}
+.header__li {
+  position: relative;
+  padding: 0 15px;
+}
+.header__li.has-child {
+  cursor: pointer;
+}
+.header__li.has-child::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  transform: rotate(135deg);
+}
+.header__li.has-child > ul {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  content: "";
+  left: 0;
+  top: auto;
+  z-index: 100001;
+  background-color: rgb(17, 17, 17);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.header__li.has-child:hover > ul {
+  visibility: visible;
+  opacity: 1;
+}
+.header__li.has-child.current > span {
+  cursor: pointer;
+}
+.header__li-child.curernt {
+  pointer-events: none;
+}
+.header__li-child > a {
+  padding: 10px 0;
+}
+.header .logo {
+  font-size: 25px;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.header .logo:hover {
+  color: #b7b3b3;
+}
+
+.current > a {
+  pointer-events: none !important;
+  color: #b7b3b3;
+}
+
+.menu__link {
+  transition: all 0.5s;
+}
+.menu__link:hover {
+  color: #b7b3b3;
 }
 
 .footer {
@@ -789,6 +820,9 @@ li {
   Stylesheet: 960px以上のモニタで適用
 
   ******************************************************************/
+  .header {
+    background-color: rgb(17, 17, 17);
+  }
   .header__inner {
     justify-content: space-between;
   }
@@ -818,6 +852,9 @@ li {
   Stylesheet: 960px以上のモニタで適用
 
   ******************************************************************/
+  .header {
+    background-color: rgb(17, 17, 17);
+  }
   .header__inner {
     justify-content: space-between;
   }
