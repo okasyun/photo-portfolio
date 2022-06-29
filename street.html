@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <main id="global-container">
+    <div id="global-container">
         <div id="container">
             <header class="header">
                 <div class="header__inner">
@@ -24,7 +24,8 @@
                         <ul class="header__ul">
                             <li class="header__li"><a class="menu__link" href="home.html">Home</a></li>
                             <li class="header__li"><a class="menu__link" href="about.html">About</a></li>
-                            <li class="header__li has-child current"><span>Works</span>
+                            <li class="header__li has-child current">
+                                Works
                                 <ul class="header__ul-child">
                                     <li class="header__li-child current"><a class="menu__link" href="street.html">Street</a></li>
                                     <li class="header__li-child"><a class="menu__link" href="animal.html">Animal</a></li>
@@ -32,13 +33,13 @@
                                     <li class="header__li-child"><a class="menu__link" href="food.html">Food</a></li>
                                 </ul>
                             </li>
-                            <li class="header__li"><a href="#">Contact</a></li>
-                            <li class="header__li"><a href="#">Prints</a></li>
+                            <li class="header__li"><a class="menu__link" href="contact.html">Contact</a></li>
+                            <li class="header__li"><a class="menu__link" href="#">Prints</a></li>
                             <li class="header__li">
-                                <a href="https://www.instagram.com/okashun5927/"><i class="fa-brands fa-instagram"></i></a>
+                                <a class="menu__link" href="https://www.instagram.com/okashun5927/"><i class="fa-brands fa-instagram"></i></a>
                             </li>
                             <li class="header__li">
-                                <a href="https://twitter.com/photo_1207"><i class="fa-brands fa-twitter""></i></a>
+                                <a class="menu__link" href="https://twitter.com/photo_1207"><i class="fa-brands fa-twitter""></i></a>
                             </li>
                         </ul>
                     </nav>
@@ -122,36 +123,42 @@
                     </ul>
                 </div>
             </main>
-            <!-- <footer class="footer"></footer> -->
+            <footer class="footer">
+                <div class="copy-right">&copy;Shun Okamoto</div>
+            </footer>
         </div>
     </div>
     <p id="page-top"><a href="#" class="page-top__link"><i class="fa-solid fa-arrow-up"></i></a>
     </p>
     <nav class="mobile-menu">
-        <ul class="mobile-menu__main">
-            <li class="mobile-menu__item">
+        <ul class="mobile-menu__ul">
+            <li class="mobile-menu__li">
                 <a class="mobile-menu__link" href="home.html">
                     <span>Home</span>
                 </a>
             </li>
-            <li class="mobile-menu__item">
+            <li class="mobile-menu__li">
                 <a class="mobile-menu__link" href="about.html">
-                    <span>About</span>
+                    About
                 </a>
             </li>
-            <li class="mobile-menu__item current">
-                <a class="mobile-menu__link" href="street.html">
-                    <span>Works</span>
-                </a>
+            <li class="mobile-menu__li has-child current">
+                Works
+                <ul class="mobile-menu__ul-child">
+                    <li class="__li-child current"><a class="mobile-menu__link" href="street.html">Street</a></li>
+                    <li class="__li-child"><a class="mobile-menu__link" href="animal.html">Animal</a></li>
+                    <li class="__li-child"><a class="mobile-menu__link" href="live.html">Live</a></li>
+                    <li class="__li-child"><a class="mobile-menu__link" href="food.html">Food</a></li>
+                </ul>
             </li>
-            <li class="mobile-menu__item">
+            <li class="mobile-menu__li">
                 <a class="mobile-menu__link" href="contact.html">
-                    <span>Contact</span>
+                    Contact
                 </a>
             </li>
-            <li class="mobile-menu__item">
+            <li class="mobile-menu__li last">
                 <a class="mobile-menu__link" href="#">
-                    <span>Prints</span>
+                    Prints
                 </a>
             </li>
             <ul class="mobile-menu__icon">
@@ -168,8 +175,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="scripts/libs/page-top.js"></script>
-    <script src="scripts/gallery.js"></script>
-    <script src="scripts/menu-open.js"></script>
+    <script src="scripts/libs/gallery.js"></script>
+    <script src="scripts/base.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="scripts/works.js"></script>
 </body>

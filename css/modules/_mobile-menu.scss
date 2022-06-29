@@ -1,6 +1,7 @@
-$cMenuClose: $cWhite;
-$cMenuOpen: $cWhite;
 
+// body {
+//     color: $cWhite;
+// }
 .mobile-menu {
     display: flex;
     justify-content: center;
@@ -26,7 +27,7 @@ $cMenuOpen: $cWhite;
         
 
         & > span {
-            background-color: $header-color;
+            background-color: $cWhite;
             // position: absolute;
             // width 100%,height100%は親の要素の影響を受ける
             border-radius: 2px;
@@ -47,33 +48,84 @@ $cMenuOpen: $cWhite;
         }
     }
     
-    &__main {
+    &__ul {
         padding: 0;
         margin: 0;
-        position: absolute;
     }
 
-    &__item {
+    &__li {
+        @extend .link;
+        letter-spacing: 5px !important;
+        position: relative;
         text-align: center;
         margin-bottom: 25px;
+        font-size: 20px;
+        color: $cWhite;
 
-        &:last-child {
-                margin-bottom: 0;
-            }
+        &.last {
+            margin-bottom: 0;
+        }
 
         & > a {
             display: block;
-            @extend .link;
-            letter-spacing: 5px !important;
-            font-size: 20px;
             transition: all .5s;
             &:hover {
                 color: #b7b3b3;
             }
         }
 
+        &.has-child {
+            cursor: pointer; //スライドにマウスアイコンをつけるか
+            &::before {
+                content: "";
+                position: absolute;
+                left: 3px;
+                top: 11px;
+                width: 6px;
+                height: 6px;
+                border-top: 1px solid $cWhite;
+                border-right: 1px solid $cWhite;
+                transform: rotate(135deg);
+            }
+
+            &.active {
+                &::before {
+                    transform: rotate(-45deg);
+                }
+            }
+            & > ul {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: auto;
+                left:0;
+                top:auto;
+                z-index: 10001;
+                background-color: $cBlack;
+                opacity: 1;
+                visibility: visible;
+                display: none;
+                // opacity: 0;
+                // visibility: hidden;
+                // transition: all .3s;
+
+                & > li {
+                    margin: 10px;
+
+                    & > a {
+
+                        display: block;
+                        transition: all .5s;
+                        &:hover {
+                            color: #b7b3b3;
+                        }
+                    }
+                }
+            }
+        }
+
         &.current > a {
-            pointer-events: none;
+            // pointer-events: none;
             color: #b7b3b3;
 
         }
@@ -99,12 +151,16 @@ $cMenuOpen: $cWhite;
     }
 }
 
+nav ul ul {
+    display: block;
+}
+
 .menu-open {
     &.mobile-menu {
         z-index: 10000;
         opacity: 1;
 
-        &__item, &__icon {
+        &__ul, &__icon {
             animation-name: menu-animate;
             animation-duration: .5s;
             animation-fill-mode: forwards;

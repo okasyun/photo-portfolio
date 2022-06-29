@@ -20,8 +20,9 @@
         opacity: 0.7;
         border-radius: 50%;
         transition:all .3s;
-
-        &:hover {
+        
+        // スマホはタッチで発動
+        &:active {
             background-color: #2d3c64;
         }
 

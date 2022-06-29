@@ -12,3 +12,11 @@ Stylesheet: 960px以上のモニタで適用
     //     margin: 0 0 30px;
     // }
 }
+
+#page-top {
+    &>a {
+        &:hover {
+            background-color: #2d3c64;
+        }
+    }
+}

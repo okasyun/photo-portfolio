@@ -4,6 +4,9 @@
 ギャラリーのためのcss
 ===================================*/
 
+// ページ遷移滑らか
+// メニュータッチでアニメーション
+// モバイルメニューとヘッダー統一するべき
 // スクロールしても固定されるfooter other works
 // トップに戻るボタン後半から
 // 写真綺麗に揃える
@@ -28,7 +31,7 @@
     display: block;
     justify-content: center;
     // align-items: center;
-    margin: $navHeight auto !important;
+    margin: $navHeight auto 0 !important;
 }
 
 .gallery-display {
@@ -40,6 +43,8 @@
 }
 
 .gallery {
+    margin: 0;
+    padding: 0;
     columns: 1;
     & > li {
         position: relative;
@@ -57,14 +62,6 @@
         }
     }
 
-}
-
-
-
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
 a {

@@ -27,7 +27,7 @@ Stylesheet: 変数リスト
   cursor: pointer;
 }
 .mobile-menu__btn > span {
-  background-color: #fff;
+  background-color: white;
   border-radius: 2px;
   width: 30px;
   height: 2px;
@@ -42,29 +42,69 @@ Stylesheet: 変数リスト
 .mobile-menu__btn > span:last-child {
   margin-bottom: 0;
 }
-.mobile-menu__main {
+.mobile-menu__ul {
   padding: 0;
   margin: 0;
-  position: absolute;
 }
-.mobile-menu__item {
+.mobile-menu__li {
+  letter-spacing: 5px !important;
+  position: relative;
   text-align: center;
   margin-bottom: 25px;
+  font-size: 20px;
+  color: white;
 }
-.mobile-menu__item:last-child {
+.mobile-menu__li.last {
   margin-bottom: 0;
 }
-.mobile-menu__item > a {
+.mobile-menu__li > a {
   display: block;
-  letter-spacing: 5px !important;
-  font-size: 20px;
   transition: all 0.5s;
 }
-.mobile-menu__item > a:hover {
+.mobile-menu__li > a:hover {
   color: #b7b3b3;
 }
-.mobile-menu__item.current > a {
-  pointer-events: none;
+.mobile-menu__li.has-child {
+  cursor: pointer;
+}
+.mobile-menu__li.has-child::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  transform: rotate(135deg);
+}
+.mobile-menu__li.has-child.active::before {
+  transform: rotate(-45deg);
+}
+.mobile-menu__li.has-child > ul {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: auto;
+  z-index: 10001;
+  background-color: rgb(17, 17, 17);
+  opacity: 1;
+  visibility: visible;
+  display: none;
+}
+.mobile-menu__li.has-child > ul > li {
+  margin: 10px;
+}
+.mobile-menu__li.has-child > ul > li > a {
+  display: block;
+  transition: all 0.5s;
+}
+.mobile-menu__li.has-child > ul > li > a:hover {
+  color: #b7b3b3;
+}
+.mobile-menu__li.current > a {
   color: #b7b3b3;
 }
 .mobile-menu__icon {
@@ -81,11 +121,15 @@ Stylesheet: 変数リスト
   color: #b7b3b3;
 }
 
+nav ul ul {
+  display: block;
+}
+
 .menu-open.mobile-menu {
   z-index: 10000;
   opacity: 1;
 }
-.menu-open.mobile-menu__item, .menu-open.mobile-menu__icon {
+.menu-open.mobile-menu__ul, .menu-open.mobile-menu__icon {
   -webkit-animation-name: menu-animate;
           animation-name: menu-animate;
   -webkit-animation-duration: 0.5s;
@@ -390,7 +434,7 @@ Stylesheet: 変数リスト
   border-radius: 50%;
   transition: all 0.3s;
 }
-#page-top > a:hover {
+#page-top > a:active {
   background-color: #2d3c64;
 }
 #page-top.UpMove {
@@ -570,7 +614,7 @@ html {
   position: relative;
   display: block;
   justify-content: center;
-  margin: 80px auto !important;
+  margin: 80px auto 0 !important;
 }
 
 .gallery-display {
@@ -582,6 +626,8 @@ html {
 }
 
 .gallery {
+  margin: 0;
+  padding: 0;
   -moz-columns: 1;
        columns: 1;
 }
@@ -595,12 +641,6 @@ html {
 }
 .gallery > li > a > img {
   width: 95%;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 a {
@@ -656,6 +696,7 @@ html {
 }
 
 body {
+  color: white;
   background-color: rgb(17, 17, 17);
   margin: 0;
 }
@@ -676,6 +717,11 @@ a {
   cursor: pointer;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 li {
   list-style: none;
 }
@@ -686,7 +732,7 @@ li {
   max-width: 1300px;
 }
 
-.link, .header__li, .mobile-menu__item > a, .mobile-menu__social-item > a {
+.link, .header__li, .mobile-menu__li, .mobile-menu__social-item > a {
   position: relative;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -750,7 +796,6 @@ li {
   position: absolute;
   width: 100%;
   height: auto;
-  content: "";
   left: 0;
   top: auto;
   z-index: 100001;
@@ -771,6 +816,9 @@ li {
 }
 .header__li-child > a {
   padding: 10px 0;
+}
+.header li.curent {
+  pointer-events: none;
 }
 .header .logo {
   font-size: 25px;
@@ -794,13 +842,17 @@ li {
 }
 
 .footer {
-  position: fixed;
+  position: relative;
   background-color: rgb(17, 17, 17);
   bottom: 0;
   left: 0;
   width: 100%;
   display: flex;
   height: 80px;
+}
+.footer > .copy-right {
+  margin: auto;
+  letter-spacing: 2px;
 }
 
 @media (min-width: 600px) {
@@ -812,6 +864,10 @@ li {
   .gallery {
     -moz-columns: 2;
          columns: 2;
+  }
+
+  #page-top > a:hover {
+    background-color: #2d3c64;
   }
 }
 @media (min-width: 960px) {
@@ -845,6 +901,10 @@ li {
     -moz-columns: 4;
          columns: 4;
   }
+
+  #page-top > a:hover {
+    background-color: #2d3c64;
+  }
 }
 @media (min-width: 1280px) {
   /******************************************************************
@@ -876,5 +936,9 @@ li {
   .gallery {
     -moz-columns: 4;
          columns: 4;
+  }
+
+  #page-top > a:hover {
+    background-color: #2d3c64;
   }
 }/*# sourceMappingURL=style.css.map */
