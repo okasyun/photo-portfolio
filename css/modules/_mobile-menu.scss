@@ -70,7 +70,7 @@
             display: block;
             // transition: all .5s;
             transition: all 1s;
-            &:active {
+            &:hover {
                 color: #b7b3b3;
             }
         }
@@ -118,7 +118,7 @@
                         display: block;
                         // transition: all .5s;
                         transition: all 1s;
-                        &:active {
+                        &:hover {
                             color: #b7b3b3;
                         }
                     }
