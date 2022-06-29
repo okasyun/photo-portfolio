@@ -175,6 +175,11 @@ nav ul ul {
     transform: translateY(0);
   }
 }
+a.active {
+  transition: all 0.5s;
+  color: orange;
+}
+
 .animate-title,
 .tween-animate-title {
   color: white;

@@ -198,3 +198,7 @@ nav ul ul {
         transform: translateY(0);
     }
 }
+a.active {
+    transition: all .5s;
+    color: orange;
+}
