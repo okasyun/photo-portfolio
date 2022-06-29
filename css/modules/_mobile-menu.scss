@@ -69,7 +69,7 @@
         & > a {
             display: block;
             transition: all .5s;
-            &:hover {
+            &:active {
                 color: #b7b3b3;
             }
         }
@@ -116,7 +116,7 @@
 
                         display: block;
                         transition: all .5s;
-                        &:hover {
+                        &:active {
                             color: #b7b3b3;
                         }
                     }
