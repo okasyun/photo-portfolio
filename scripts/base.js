@@ -15,12 +15,10 @@ $(window).on('load', function() {
     dropDown();
 });
 
-$('a').on('touchstart', function(){
-    $('a').css('background-color',"orange");
-});
+
 
 $('.mobile-menu__link').on('touchstart', function(){
-    $('.mobile-menu__link').css('background-color',"orange");
+    $('.mobile-menu__link').css('color',"orange");
 });
     // $("#mobile-menu a").click(function () {
     //     $('.mobile-menu').removeClass('menu-open');
