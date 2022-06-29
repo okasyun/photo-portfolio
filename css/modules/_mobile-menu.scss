@@ -67,11 +67,10 @@
         }
 
         & > a {
+            transition: all 3s;
             display: block;
-            // transition: all .5s;
-            transition: all 1s;
             &:hover {
-                color: #b7b3b3;
+                color: orange;
             }
         }
 
@@ -114,10 +113,7 @@
                     margin: 10px;
 
                     & > a {
-
-                        display: block;
-                        // transition: all .5s;
-                        transition: all 1s;
+                        transition: all 3s;
                         &:hover {
                             color: #b7b3b3;
                         }
