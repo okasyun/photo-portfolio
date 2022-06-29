@@ -68,7 +68,8 @@
 
         & > a {
             display: block;
-            transition: all .5s;
+            // transition: all .5s;
+            transition: all 1s;
             &:active {
                 color: #b7b3b3;
             }
@@ -115,7 +116,8 @@
                     & > a {
 
                         display: block;
-                        transition: all .5s;
+                        // transition: all .5s;
+                        transition: all 1s;
                         &:active {
                             color: #b7b3b3;
                         }

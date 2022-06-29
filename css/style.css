@@ -59,7 +59,7 @@ Stylesheet: 変数リスト
 }
 .mobile-menu__li > a {
   display: block;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 .mobile-menu__li > a:active {
   color: #b7b3b3;
@@ -99,7 +99,7 @@ Stylesheet: 変数リスト
 }
 .mobile-menu__li.has-child > ul > li > a {
   display: block;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 .mobile-menu__li.has-child > ul > li > a:active {
   color: #b7b3b3;
