@@ -110,10 +110,14 @@
                 // transition: all .3s;
 
                 & > li {
-                    margin: 10px;
+                    &:first-child {
+                        margin-top: 20px;
+                    }
+                    margin-bottom: 20px;
 
                     & > a {
                         transition: all .5s;
+
                         &:hover {
                             color: orange;
                         }
@@ -122,7 +126,7 @@
             }
         }
 
-        &.current > a {
+        &.current > a, span {
             // pointer-events: none;
             color: #b7b3b3;
 
@@ -147,10 +151,6 @@
             }
         }
     }
-}
-
-nav ul ul {
-    display: block;
 }
 
 .menu-open {
