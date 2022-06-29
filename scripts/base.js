@@ -17,9 +17,11 @@ $(window).on('load', function() {
 
 
 
-$('.mobile-menu__link').on('click touchstart', function(){
-    $(this).addClass('active');
-});
+// $('.mobile-menu__link').on('click touchstart', function(){
+//     $(this).addClass('active');
+// });
+
+
     // $("#mobile-menu a").click(function () {
     //     $('.mobile-menu').removeClass('menu-open');
     //     $('mobile-menu__btn').removeClass('menu-open');

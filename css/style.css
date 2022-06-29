@@ -437,7 +437,7 @@ a.active {
   border-radius: 50%;
   transition: all 0.3s;
 }
-#page-top > a:active {
+#page-top > a:hover {
   background-color: #2d3c64;
 }
 #page-top.UpMove {
@@ -775,7 +775,6 @@ li {
 }
 .header__ul-child {
   display: block;
-  background-color: orange;
 }
 .header__li {
   position: relative;
@@ -829,7 +828,7 @@ li {
   transition: all 0.5s;
 }
 .header .logo:hover {
-  color: #b7b3b3;
+  color: orange;
 }
 
 .current > a {
@@ -841,7 +840,7 @@ li {
   transition: all 0.5s;
 }
 .menu__link:hover {
-  color: #b7b3b3;
+  color: orange;
 }
 
 .footer {
@@ -867,10 +866,6 @@ li {
   .gallery {
     -moz-columns: 2;
          columns: 2;
-  }
-
-  #page-top > a:hover {
-    background-color: #2d3c64;
   }
 }
 @media (min-width: 960px) {
@@ -904,10 +899,6 @@ li {
     -moz-columns: 4;
          columns: 4;
   }
-
-  #page-top > a:hover {
-    background-color: #2d3c64;
-  }
 }
 @media (min-width: 1280px) {
   /******************************************************************
@@ -939,9 +930,5 @@ li {
   .gallery {
     -moz-columns: 4;
          columns: 4;
-  }
-
-  #page-top > a:hover {
-    background-color: #2d3c64;
   }
 }/*# sourceMappingURL=style.css.map */

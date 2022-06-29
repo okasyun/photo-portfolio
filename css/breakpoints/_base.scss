@@ -99,7 +99,6 @@ li {
 
         &-child {
             display: block;
-            background-color: orange;
         }
     }
 
@@ -184,7 +183,7 @@ li.curent {
         justify-content: center;
         transition: all .5s;
         &:hover {
-            color: #b7b3b3;;
+            color: orange;
         }
     }
 }
@@ -199,7 +198,7 @@ li.curent {
 .menu__link {
     transition: all .5s;
     &:hover {
-        color: #b7b3b3;
+        color: orange;
     }
 }
 // #main-content {

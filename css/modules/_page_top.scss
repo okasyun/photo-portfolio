@@ -22,7 +22,7 @@
         transition:all .3s;
         
         // スマホはタッチで発動
-        &:active {
+        &:hover {
             background-color: #2d3c64;
         }
 
