@@ -17,8 +17,8 @@ $(window).on('load', function() {
 
 
 
-$('.mobile-menu__link').on('touchstart', function(){
-    $('.mobile-menu__link').css('color',"orange");
+$('.mobile-menu__link').on('click touchstart', function(){
+    $(this).css('color',"orange");
 });
     // $("#mobile-menu a").click(function () {
     //     $('.mobile-menu').removeClass('menu-open');
