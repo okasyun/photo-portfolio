@@ -3,18 +3,25 @@ $(".mobile-menu__btn").click(function () {
         $('.mobile-menu').toggleClass('menu-open');
     });
 
-    // ウィンドウサイズが960未満の場合無効化したい
-    function dropDown() {
-            $(".mobile-menu__li.has-child").on('click', function() {
-                $(this).toggleClass('active');
-                $(this).children('ul').stop().slideToggle(200);
-            });
-    }
+// ウィンドウサイズが960未満の場合無効化したい
+function dropDown() {
+        $(".mobile-menu__li.has-child").on('click', function() {
+            $(this).toggleClass('active');
+            $(this).children('ul').stop().slideToggle(200);
+        });
+}
 
-    $(window).on('load', function() {
-        dropDown();
-    });
+$(window).on('load', function() {
+    dropDown();
+});
 
+$('a').on('touchstart', function(){
+    $('a').css('background-color',"orange");
+});
+
+$('.mobile-menu__link').on('touchstart', function(){
+    $('.mobile-menu__link').css('background-color',"orange");
+});
     // $("#mobile-menu a").click(function () {
     //     $('.mobile-menu').removeClass('menu-open');
     //     $('mobile-menu__btn').removeClass('menu-open');
