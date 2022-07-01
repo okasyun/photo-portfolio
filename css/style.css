@@ -106,7 +106,7 @@ Stylesheet: 変数リスト
 .mobile-menu__li.has-child > ul > li > a:hover {
   color: orange;
 }
-.mobile-menu__li.current > a, .mobile-menu__li span {
+.mobile-menu__li.current > a, .mobile-menu__li .mobile-menu__span {
   color: #b7b3b3;
 }
 .mobile-menu__icon {
