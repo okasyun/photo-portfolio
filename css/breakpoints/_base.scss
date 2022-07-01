@@ -19,6 +19,9 @@ body {
     background-color: $cBlack;
     margin: 0;
     // overflow: hidden;
+    // &.windowsize {
+    //     height: 100vh;
+    // }
 }
 
 img {
@@ -59,13 +62,17 @@ li {
     transition: all 0.5s;
 }
 
-#global-container {
-    animation: page_change 1s ease-in-out;
-}
+// #global-container {
+//     animation: page_change 2s ease-in-out;
+// }
 
 #container {
     background-color: $cBlack;
     position: relative;
+    animation: page_change 2s ease-in-out;
+    &_windowsize {
+        height: 100vh;
+    }
 }
 
 .header {
@@ -216,9 +223,10 @@ li.curent {
 
 
 .footer {
+    z-index: 100000;
     position: relative;
     background-color: $cBlack;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     width: 100%;
     display: flex;

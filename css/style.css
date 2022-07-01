@@ -419,7 +419,7 @@ a.active {
 }
 
 #page-top {
-  z-index: 10000;
+  z-index: 1000000;
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -494,10 +494,6 @@ a.active {
     transform: translateY(100px);
   }
 }
-html {
-  height: 100vh;
-}
-
 #main-content {
   margin-top: 80px;
   position: relative;
@@ -689,6 +685,24 @@ p {
     transform: scaleY(0);
   }
 }
+.about {
+  position: relative;
+  margin-top: 80px !important;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 2px;
+}
+
+.box_text {
+  font-size: 1.2rem;
+  letter-spacing: 0.3em;
+  padding-top: 35px;
+}
+
+img {
+  height: 100vh !important;
+}
+
 /******************************************************************
 
 Stylesheet: ベーススタイル
@@ -729,7 +743,7 @@ li {
   list-style: none;
 }
 
-.content-width, .header__inner, #gallery-content {
+.content-width, .header__inner, #gallery-content, .about {
   width: 95%;
   margin: 0 auto;
   max-width: 1300px;
@@ -742,14 +756,14 @@ li {
   transition: all 0.5s;
 }
 
-#global-container {
-  -webkit-animation: page_change 1s ease-in-out;
-          animation: page_change 1s ease-in-out;
-}
-
 #container {
   background-color: rgb(17, 17, 17);
   position: relative;
+  -webkit-animation: page_change 2s ease-in-out;
+          animation: page_change 2s ease-in-out;
+}
+#container_windowsize {
+  height: 100vh;
 }
 
 .header {
@@ -849,9 +863,10 @@ li {
 }
 
 .footer {
+  z-index: 100000;
   position: relative;
   background-color: rgb(17, 17, 17);
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   width: 100%;
   display: flex;

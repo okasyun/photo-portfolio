@@ -4,9 +4,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shun Okamoto</title>
+    <meta name="description" content="a portfolio of Shun Okamoto">
+    <link href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
+<body class="windowsize">
+    <div id="container_windowsize">
+        <header class="header">
+            <div class="header__inner">
+                <a href="home.html" class="logo">
+                    <span class="logo">Shun Okamoto</span>
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__ul">
+                        <li class="header__li"><a class="menu__link" href="home.html">Home</a></li>
+                        <li class="header__li current"><a class="menu__link" href="about.html">About</a></li>
+                        <li class="header__li has-child">
+                            Works
+                            <ul class="header__ul-child">
+                                <li class="header__li-child"><a class="menu__link" href="street.html">Street</a>
+                                </li>
+                                <li class="header__li-child"><a class="menu__link" href="animal.html">Animal</a></li>
+                                <li class="header__li-child"><a class="menu__link" href="live.html">Live</a></li>
+                                <li class="header__li-child"><a class="menu__link" href="others.html">Others</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__li"><a class="menu__link" href="contact.html">Contact</a></li>
+                        <li class="header__li"><a class="menu__link" href="#">Prints</a></li>
+                        <li class="header__li">
+                            <a class="menu__link" href="https://www.instagram.com/okashun5927/"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li class="header__li">
+                            <a class="menu__link" href="https://twitter.com/photo_1207"><i class="fa-brands fa-twitter""></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class=" mobile-menu__btn">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    </button>
+            </div>
+        </header>
+        <main class="about">
+            <div class="selfie">
+                <img src="images/selfie.jpg" alt="">
+            </div>
+            <div class="box_text">
+                <div class="title">岡本　峻 | Shun Okamoto</div>
+                <div class="text_Jap">
+                    <br>2000年12月生まれ、東京都出身の大学生。
+                    <br>ストリートを中心に写真を撮っています。
+                </div>
+                <div class="text_Eng">
+                    <br>A university student from Tokyo, born in December 2000.
+                    <br>I take photos, mainly street photography.
+                </div>
+
+                <div class="gear"></div>
+                <div class="camera">
+                    Camera
+                    <div class="text">
+                        <br>Sony α7III
+                    </div>
+                </div>
+                <div class="lense">Lenses
+                    <div class="text">
+                        <br>SIGMA 35mm F1.4 DG DN
+                        <br>SIGMA 85mm F1.4 DG DN
+                        <br>TAMRON 28-75mm F/2.8 Di III VXD G2
+                        <br>TAMRON 70-180mm F/2.8 Di III VXD
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="copy-right">&copy;Shun Okamoto</div>
+        </footer>
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu__ul">
+            <li class="mobile-menu__li">
+                <a class="mobile-menu__link" href="home.html">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="mobile-menu__li current">
+                <a class="mobile-menu__link" href="about.html">
+                    About
+                </a>
+            </li>
+            <li class="mobile-menu__li has-child">
+                Works
+                <ul class="mobile-menu__ul-child">
+                    <li class="__li-child"><a class="mobile-menu__link" href="street.html">Street</a></li>
+                    <li class="__li-child"><a class="mobile-menu__link" href="animal.html">Animal</a></li>
+                    <li class="__li-child"><a class="mobile-menu__link" href="live.html">Live</a></li>
+                    <li class="__li-child"><a class="mobile-menu__link" href="others.html">Others</a></li>
+                </ul>
+            </li>
+            <li class="mobile-menu__li">
+                <a class="mobile-menu__link" href="contact.html">
+                    Contact
+                </a>
+            </li>
+            <li class="mobile-menu__li last">
+                <a class="mobile-menu__link" href="#">
+                    Prints
+                </a>
+            </li>
+            <ul class="mobile-menu__icon">
+                <li class="mobile-menu__social-item"><a href="https://www.instagram.com/okashun5927/"><i
+                            class="fa-brands fa-instagram"></i></a></li>
+                <li class="mobile-menu__social-item"><a href="https://twitter.com/photo_1207"><i
+                            class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+        </ul>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="scripts/base.js"></script>
 </body>
 </html>
