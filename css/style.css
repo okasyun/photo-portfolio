@@ -699,7 +699,7 @@ p {
   padding-top: 35px;
 }
 
-img {
+.selfie > img {
   height: 100vh !important;
 }
 
