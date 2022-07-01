@@ -59,7 +59,9 @@ li {
     transition: all 0.5s;
 }
 
-
+#global-container {
+    animation: page_change 1s ease-in-out;
+}
 
 #container {
     background-color: $cBlack;
@@ -225,5 +227,14 @@ li.curent {
     & > .copy-right {
         margin: auto;
         letter-spacing: 2px;
+    }
+}
+
+@keyframes page_change {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;;
     }
 }

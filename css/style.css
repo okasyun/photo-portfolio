@@ -742,6 +742,11 @@ li {
   transition: all 0.5s;
 }
 
+#global-container {
+  -webkit-animation: page_change 1s ease-in-out;
+          animation: page_change 1s ease-in-out;
+}
+
 #container {
   background-color: rgb(17, 17, 17);
   position: relative;
@@ -857,6 +862,23 @@ li {
   letter-spacing: 2px;
 }
 
+@-webkit-keyframes page_change {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes page_change {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media (min-width: 600px) {
   /******************************************************************
 
