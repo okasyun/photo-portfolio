@@ -32,6 +32,18 @@ Stylesheet: 960px以上のモニタで適用
     position: absolute;
     &__inner {
         display: flex;
+        &>.selfie {
+                margin-bottom: 0;
+
+                & > img {
+                    height: 90%;
+                }
+            }
+        & > .box_text {
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
     }
 }
 
