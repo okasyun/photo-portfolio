@@ -714,25 +714,25 @@ p {
   /* padding-top: 35px; */
 }
 .box_text > .title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .box_text > .text_Jap {
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding-top: 15px;
   line-height: 2.25em;
 }
 .box_text > .text_Eng {
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 0.14em;
   line-height: 2em;
   padding-top: 10px;
 }
 .box_text > .gear {
   padding-top: 15px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .box_text > .gear > .text {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .box_text > .gear > .text > li {
   letter-spacing: 0.2rem;
