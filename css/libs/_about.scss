@@ -1,14 +1,30 @@
+html {
+    height: 100vh;
+    // overflow: hidden;
+}
+
 .about {
-    position: relative;
-    margin-top: 80px !important;
+    top: $navHeight;
+    bottom: $navHeight;
+    font-family: 'Noto Serif JP', serif;
+    position: absolute;
     display: flex;
-    @extend .content-width;
+    width: 95%;
+    // margin: 0 auto;
+    max-width: 1300px;
+    // @extend .content-width;
     justify-content: center;
     letter-spacing: 2px;
+    &__inner {
+        height: 80%;
+        width: 80%;
+        margin: auto;
+        display: flex;
+    }
 }
 
 .box_text {
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
     letter-spacing: 0.3em;
     // line-height: 2.35em;
     padding-top: 35px;
@@ -16,5 +32,5 @@
 
 .selfie > 
     img {
-        height: 100vh !important;
+        // height: 50%;
     }

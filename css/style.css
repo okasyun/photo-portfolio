@@ -685,22 +685,31 @@ p {
     transform: scaleY(0);
   }
 }
+html {
+  height: 100vh;
+}
+
 .about {
-  position: relative;
-  margin-top: 80px !important;
+  top: 80px;
+  bottom: 80px;
+  font-family: "Noto Serif JP", serif;
+  position: absolute;
   display: flex;
+  width: 95%;
+  max-width: 1300px;
   justify-content: center;
   letter-spacing: 2px;
 }
-
-.box_text {
-  font-size: 1.2rem;
-  letter-spacing: 0.3em;
-  padding-top: 35px;
+.about__inner {
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  display: flex;
 }
 
-.selfie > img {
-  height: 100vh !important;
+.box_text {
+  letter-spacing: 0.3em;
+  padding-top: 35px;
 }
 
 /******************************************************************
@@ -709,7 +718,7 @@ Stylesheet: ベーススタイル
 
 ******************************************************************/
 html {
-  font-family: "Chivo", sans-serif;
+  font-family: "Chivo", sans-serif, "Noto Serif JP";
 }
 
 body {
@@ -743,7 +752,7 @@ li {
   list-style: none;
 }
 
-.content-width, .header__inner, #gallery-content, .about {
+.content-width, .header__inner, #gallery-content {
   width: 95%;
   margin: 0 auto;
   max-width: 1300px;
@@ -764,6 +773,11 @@ li {
 }
 #container_windowsize {
   height: 100vh;
+  overflow: hidden;
+  background-color: rgb(17, 17, 17);
+  position: relative;
+  -webkit-animation: page_change 2s ease-in-out;
+          animation: page_change 2s ease-in-out;
 }
 
 .header {
@@ -864,7 +878,7 @@ li {
 
 .footer {
   z-index: 100000;
-  position: relative;
+  position: absolute;
   background-color: rgb(17, 17, 17);
   bottom: 0px;
   left: 0;
