@@ -686,6 +686,7 @@ p {
   }
 }
 .about {
+  margin-bottom: 80px;
   top: 80px;
   bottom: 80px;
   font-family: "Noto Serif JP", serif;
@@ -921,6 +922,7 @@ li {
   }
 
   .about {
+    margin-bottom: 0px;
     position: absolute;
   }
   .about__inner {
