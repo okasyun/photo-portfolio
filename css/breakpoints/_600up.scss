@@ -20,3 +20,21 @@ Stylesheet: 960px以上のモニタで適用
 //         }
 //     }
 // }
+
+#container {
+    &_windowsize {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+.about {
+    position: absolute;
+    &__inner {
+        display: flex;
+    }
+}
+
+.footer {
+    position: absolute;
+}
+

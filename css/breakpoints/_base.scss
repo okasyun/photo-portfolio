@@ -15,10 +15,6 @@ body {
     color: $cWhite;
     background-color: $cBlack;
     margin: 0;
-    // overflow: hidden;
-    // &.windowsize {
-    //     height: 100vh;
-    // }
 }
 
 img {
@@ -68,8 +64,8 @@ li {
     position: relative;
     animation: page_change 2s ease-in-out;
     &_windowsize {
-        height: 100vh;
-        overflow: hidden;
+        // height: 100vh;
+        // overflow: hidden;
         background-color: $cBlack;
         position: relative;
         animation: page_change 2s ease-in-out;
@@ -225,7 +221,8 @@ li.curent {
 
 .footer {
     z-index: 100000;
-    position: absolute;
+    position: relative;
+    // position: absolute;
     background-color: $cBlack;
     bottom: 0px;
     left: 0;

@@ -1,36 +1,27 @@
-html {
-    height: 100vh;
-    // overflow: hidden;
-}
 
 .about {
     top: $navHeight;
     bottom: $navHeight;
     font-family: 'Noto Serif JP', serif;
-    position: absolute;
+    // position: absolute;
+    position: relative;
     display: flex;
-    width: 95%;
-    // margin: 0 auto;
-    max-width: 1300px;
-    // @extend .content-width;
+    width: 100%;
     justify-content: center;
     letter-spacing: 2px;
     &__inner {
         height: 80%;
         width: 80%;
         margin: auto;
-        display: flex;
+        display: block;
+        // display: flex;
     }
 }
 
 .box_text {
-    // font-size: 1.2rem;
+    font-size: .9em;
+    margin: auto 0;
     letter-spacing: 0.3em;
-    // line-height: 2.35em;
-    padding-top: 35px;
+    /* padding-top: 35px; */
+    margin-left: 20px;
 }
-
-.selfie > 
-    img {
-        // height: 50%;
-    }
