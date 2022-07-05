@@ -781,6 +781,14 @@ p {
   justify-content: center;
   align-items: center;
 }
+.wrap_tbl dl {
+  overflow: hidden;
+}
+.wrap_tbl dt {
+  clear: left;
+  float: left;
+  width: 100px;
+}
 
 /******************************************************************
 

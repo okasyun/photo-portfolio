@@ -19,7 +19,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    & dl {
+        overflow: hidden;
+    }
+
+    &  dt {
+        clear: left;
+        float: left;
+        width: 100px;
+        }
 }
+
 
 // .footer {
 //     position: absolute !important;
