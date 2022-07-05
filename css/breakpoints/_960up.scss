@@ -34,10 +34,28 @@ Stylesheet: 960px以上のモニタで適用
     // }
 }
 
-// #page-top {
-//     & > a {
-//         &:hover {
-//                 background-color: #2d3c64;
-//             }
-//     }
-// }
+.about {
+    margin-top: 0;
+    left: 0;
+    right: 0;
+    top: $navHeight;
+    bottom: $navHeight;
+    position: absolute;
+
+    &__inner {
+        display: flex;
+
+        &>.selfie {
+            margin-bottom: 0;
+
+            &>img {
+                height: 90%;
+            }
+        }
+
+        &>.box_text {
+            padding-left: 20px;
+
+        }
+    }
+}

@@ -1,0 +1,26 @@
+// .wrap_tbl {
+//     position: relative;
+//     margin: 0 auto;
+//     top: $navHeight;
+//     bottom: $navHeight;
+// }
+.contact {
+    @extend .content-width;
+    // position: absolute;
+    position: relative;
+    top: 80px;
+    bottom: 80px;
+    width: 100%;
+}
+
+.wrap_tbl {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    position: absolute !important;
+}

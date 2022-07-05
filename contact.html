@@ -35,7 +35,6 @@
                             </ul>
                         </li>
                         <li class="header__li current"><a class="menu__link" href="contact.html">Contact</a></li>
-                        <li class="header__li"><a class="menu__link" href="#">Prints</a></li>
                         <li class="header__li">
                             <a class="menu__link" href="https://www.instagram.com/okashun5927/"><i
                                     class="fa-brands fa-instagram"></i></a>
@@ -53,6 +52,37 @@
                                     </button>
             </div>
         </header>
+        <main class="contact">
+            <form action="post" action entype="multipart/form-data">
+                <div class="wrap_tbl">
+                    <dl>
+                        <dt>COMPANY</dt>
+                        <dd>
+                            <input type="text" name="COMPANY" size="60" value>
+                        </dd>
+                        <dt>NAME</dt>
+                        <dd>
+                            <input type="text" name="NAME" size="60" value>
+                        </dd>
+                        <dt>E-mail</dt>
+                        <dd>
+                            <input type="text" name="E-mail" size="60" value>
+                        </dd>
+                        <dt>TEL</dt>
+                        <dd>
+                            <input type="text" name="TEL" size="60" value>
+                        </dd>
+                        <dt>MESSAGE</dt>
+                        <dd>
+                            <textarea name="MESSAGE" cols="50" rows="5"></textarea>
+                        </dd>
+                        <dd class="dd_btn">
+                            <button type="submit" name="submitConfirm" value="confirm" class="btn_send link_fade">SEND</button>
+                        </dd>
+                    </dl>
+                </div>
+            </form>
+        </main>
         <footer class="footer">
             <div class="copy-right">&copy;Shun Okamoto</div>
         </footer>
@@ -78,14 +108,9 @@
                     <li class="__li-child"><a class="mobile-menu__link" href="others.html">Others</a></li>
                 </ul>
             </li>
-            <li class="mobile-menu__li current">
+            <li class="mobile-menu__li current last">
                 <a class="mobile-menu__link" href="contact.html">
                     Contact
-                </a>
-            </li>
-            <li class="mobile-menu__li last">
-                <a class="mobile-menu__link" href="#">
-                    Prints
                 </a>
             </li>
             <ul class="mobile-menu__icon">
@@ -99,7 +124,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="scripts/base.js"></script>
-    <script src="scripts/home.js"></script>
 </body>
 
 </html>
