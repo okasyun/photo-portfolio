@@ -767,13 +767,18 @@ p {
   }
 }
 .contact {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  position: relative;
   overflow: hidden;
-  position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
-  top: 80px;
-  bottom: 80px;
-  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  width: 90%;
 }
 
 .wrap_tbl {
@@ -783,13 +788,8 @@ p {
   justify-content: center;
   align-items: center;
 }
-.wrap_tbl dl {
-  overflow: hidden;
-}
 .wrap_tbl dt {
-  clear: left;
-  float: left;
-  width: 100px;
+  padding: 35px 0 5px 50px;
 }
 .wrap_tbl dd {
   margin-bottom: 20px;
@@ -797,11 +797,27 @@ p {
 }
 .wrap_tbl input {
   margin: 0;
-  padding: 0;
+  border: 0;
+  height: 10px;
+  letter-spacing: 0.2em;
+  padding: 13px 15px 12px;
 }
 .wrap_tbl textarea {
   margin: 0;
+  border: 0;
+  height: 40px;
+  letter-spacing: 0.2em;
+  padding: 13px 15px 12px;
+}
+.wrap_tbl .dd_btn {
+  display: flex;
+  justify-content: center;
+}
+.wrap_tbl button {
+  border: 0;
+  margin: 0;
   padding: 0;
+  background-color: orange;
 }
 
 /******************************************************************
@@ -844,7 +860,7 @@ li {
   list-style: none;
 }
 
-.content-width, .header__inner, #gallery-content, .contact {
+.content-width, .header__inner, #gallery-content {
   width: 95%;
   margin: 0 auto;
   max-width: 1300px;
@@ -971,9 +987,6 @@ li {
   width: 100%;
   display: flex;
   height: 80px;
-}
-.footer.windowsize {
-  position: absolute;
 }
 .footer > .copy-right {
   margin: auto;

@@ -5,15 +5,27 @@
 //     bottom: $navHeight;
 // }
 .contact {
-    // display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $navHeight;
+    position: relative;
     overflow: hidden;
-    @extend .content-width;
-    position: absolute;
+    top: 0;
     left: 0;
-    right: 0;
-    top: 80px;
-    bottom: 80px;
-    width: 100%;
+    // display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    width: 90%;
+    // height: 90vh;
+    // display: flex;
+    // @extend .content-width;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    // top: 80px;
+    // width: 100%;
 }
 
 .wrap_tbl {
@@ -24,13 +36,11 @@
     align-items: center;
 
     & dl {
-        overflow: hidden;
+
     }
 
     &  dt {
-        clear: left;
-        float: left;
-        width: 100px;
+        padding: 35px 0 5px 50px;
         }
 
     & dd {
@@ -39,11 +49,30 @@
     }
     & input {
         margin: 0;
-        padding: 0;
+        border: 0;
+        height: 10px;
+        letter-spacing: 0.2em;
+        padding: 13px 15px 12px;
     }
+
     & textarea {
         margin: 0;
+        border: 0;
+        height: 40px;
+        letter-spacing: 0.2em;
+        padding: 13px 15px 12px;
+    }
+
+    & .dd_btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    & button {
+        border: 0;
+        margin: 0;
         padding: 0;
+        background-color: orange;
     }
 }
 
