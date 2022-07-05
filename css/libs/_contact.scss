@@ -7,10 +7,12 @@
 .contact {
     @extend .content-width;
     // position: absolute;
+    // margin-top: 80px;
     position: relative;
     top: 80px;
     bottom: 80px;
     width: 100%;
+    height: 500px;
 }
 
 .wrap_tbl {
@@ -29,6 +31,18 @@
         float: left;
         width: 100px;
         }
+
+    & dd {
+        margin: 0;
+    }
+    & input {
+        margin: 0;
+        padding: 0;
+    }
+    & textarea {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 
