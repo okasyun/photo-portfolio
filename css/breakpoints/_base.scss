@@ -225,6 +225,10 @@ li.curent {
     display: flex;
     height: $navHeight;
 
+    &.windowsize {
+        position: absolute;
+    }
+
     & > .copy-right {
         margin: auto;
         letter-spacing: 2px;

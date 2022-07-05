@@ -50,3 +50,13 @@ Stylesheet: 960px以上のモニタで適用
     position: absolute;
 }
 
+
+.wrap_tbl {
+    & .dd_btn {
+        display: block;
+    }
+
+    & textarea, & input {
+        width: 80%;
+    }
+}
