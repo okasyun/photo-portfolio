@@ -85,8 +85,8 @@ Stylesheet: 変数リスト
 .mobile-menu__li.has-child > ul {
   position: relative;
   top: 0;
+  height: 180px;
   width: 100%;
-  height: auto;
   left: 0;
   z-index: 10001;
   background-color: rgb(17, 17, 17);

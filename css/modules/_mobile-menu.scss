@@ -94,11 +94,10 @@
                 }
             }
             & > ul {
-                // content: '';
                 position: relative;
                 top:0;
+                height: 180px;
                 width: 100%;
-                height: auto;
                 left:0;
                 z-index: 10001;
                 background-color: $cBlack;
