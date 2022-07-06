@@ -7,7 +7,7 @@ $(".mobile-menu__btn").click(function () {
 function dropDown() {
         $(".mobile-menu__li.has-child").on('click', function() {
             $(this).toggleClass('active');
-            $(this).children('ul').stop().slideToggle(200);
+            $(this).children('ul').stop().slideToggle(300);
         });
 }
 

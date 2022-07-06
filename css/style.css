@@ -45,6 +45,7 @@ Stylesheet: 変数リスト
 .mobile-menu__ul {
   padding: 0;
   margin: 0;
+  min-height: 500px;
 }
 .mobile-menu__li {
   letter-spacing: 5px !important;
@@ -62,7 +63,7 @@ Stylesheet: 変数リスト
   display: block;
 }
 .mobile-menu__li > a:hover {
-  color: orange;
+  color: rgb(100, 100, 100);
 }
 .mobile-menu__li.has-child {
   cursor: pointer;
@@ -82,12 +83,11 @@ Stylesheet: 変数リスト
   transform: rotate(-45deg);
 }
 .mobile-menu__li.has-child > ul {
-  content: "";
-  position: absolute;
+  position: relative;
+  top: 0;
   width: 100%;
   height: auto;
   left: 0;
-  top: auto;
   z-index: 10001;
   background-color: rgb(17, 17, 17);
   opacity: 1;
@@ -104,10 +104,10 @@ Stylesheet: 変数リスト
   transition: all 0.5s;
 }
 .mobile-menu__li.has-child > ul > li > a:hover {
-  color: orange;
+  color: rgb(100, 100, 100);
 }
 .mobile-menu__li.current > a, .mobile-menu__li .mobile-menu__span {
-  color: #b7b3b3;
+  color: rgb(100, 100, 100);
 }
 .mobile-menu__icon {
   padding: 0;
@@ -120,7 +120,7 @@ Stylesheet: 変数リスト
   margin: 0 20px;
 }
 .mobile-menu__social-item > a:hover {
-  color: orange;
+  color: rgb(100, 100, 100);
 }
 
 .menu-open.mobile-menu {
@@ -176,7 +176,7 @@ Stylesheet: 変数リスト
 }
 a.active {
   transition: all 0.5s;
-  color: orange;
+  color: rgb(100, 100, 100);
 }
 
 .animate-title,
@@ -978,24 +978,24 @@ li {
   transition: all 0.5s;
 }
 .header .logo:hover {
-  color: orange;
+  color: rgb(100, 100, 100);
 }
 
 .current > a {
   pointer-events: none !important;
-  color: #b7b3b3;
+  color: rgb(100, 100, 100);
 }
 
 .menu__link {
   transition: all 0.5s;
 }
 .menu__link:hover {
-  color: orange;
+  color: rgb(100, 100, 100);
 }
 
 .footer {
   font-size: 0.8em;
-  z-index: 100000;
+  z-index: 1000;
   position: relative;
   background-color: rgb(17, 17, 17);
   bottom: 0px;

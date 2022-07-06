@@ -162,28 +162,12 @@ li {
 li.curent {
     pointer-events: none;
 }
-    // &__li-icon {
-    //     // インスタアイコンだけ線削除したい
-    //     margin-left: 20px;
-    //     &:last-child {
-    //         // margin-right: 20px;
-    //     }
-
-    //     & > a {
-    //         transition: all .5s;
-    //         &:hover {
-             
-    //             color: #b7b3b3;
-    //         }
-    //     }
-    // }
-
     & .logo {
         font-size: 25px;
         justify-content: center;
         transition: all .5s;
         &:hover {
-            color: orange;
+            color: rgb(100, 100, 100);;
         }
     }
 }
@@ -191,14 +175,14 @@ li.curent {
 .current > a {
 
     pointer-events: none !important;
-    color: #b7b3b3;
+    color: rgb(100, 100, 100);
 
 }
 
 .menu__link {
     transition: all .5s;
     &:hover {
-        color: orange;
+        color: rgb(100, 100, 100);;
     }
 }
 // #main-content {
@@ -215,7 +199,7 @@ li.curent {
 
 .footer {
     font-size: 0.8em;
-    z-index: 100000;
+    z-index: 1000;
     position: relative;
     // position: absolute;
     background-color: $cBlack;
