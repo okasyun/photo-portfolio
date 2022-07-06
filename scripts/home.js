@@ -10,7 +10,7 @@
 
 
 titles = ['Akihabara','Asakusa','Ueno','Nakano', 'Shinjuku', 'Sugamo', 'Akabane', 'Akihabara', 'Ochanomizu', 'Sapporo', 'Tateishi', 'Nakano', 'Shinjuku', 'Otaru', 'Akihabara', 'Kitasenju', 'Sapporo', 'Asakusa', 'Shibuya', 'Shinjuku', 'Shibuya', 'Akihabara', 'Sapporo', 'Sapporo', 'Ootemachi', 'Tateishi', 'Koenji', 'Asakusa', 'Sapporo', 'Ootemachi', 'Kokudo', 'Yokohama', 'Shinjuku', 'Ootemachi', 'Shinbashi', 'Yokohama', 'Shinbashi', 'Ootemachi', 'Shinjuku', 'Shinbashi', 'Shinjuku', 'Yokohama', 'Ueno', 'Tateishi', 'Shinbashi', 'Nakano', 'Shinjuku', 'Shinbashi', 'Shinjuku', 'Asakusa', 'Koenji', 'Shinjuku', 'Shinjuku', 'Sapporo', 'Ootemachi', 'Yokohama', 'Yokohama', 'Uguisudani', 'Tateishi', 'Roppongi', 'Noge', 'Shinjuku', 'Shinjuku', 'Yokohama', 'Musashiseki', 'Sapporo', 'Akabane'];
-window.onload = function () {
+window.addEventListener('load', function () {
     const images = document.querySelectorAll("img")
     const title = document.querySelector(".title");
     if (images.length=!titles.length){
@@ -38,4 +38,4 @@ window.onload = function () {
         }
     }
 
-}
+});

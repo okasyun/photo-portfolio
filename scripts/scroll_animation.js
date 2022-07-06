@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('load', function () {
 
     const cb = function (el, inview) {
         if(inview) {
