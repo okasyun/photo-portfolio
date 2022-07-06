@@ -12,6 +12,7 @@ function dropDown() {
 }
 
 $(window).on('load', function() {
+    $('#global-container').addClass('loaded');
     dropDown();
 });
 

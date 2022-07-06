@@ -889,6 +889,15 @@ li {
   transition: all 0.5s;
 }
 
+#global-container {
+  opacity: 0;
+  visibility: hidden;
+}
+#global-container.loaded {
+  opacity: 1;
+  visibility: visible;
+}
+
 #container {
   background-color: rgb(17, 17, 17);
   position: relative;

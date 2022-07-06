@@ -58,7 +58,14 @@ li {
 // #global-container {
 //     animation: page_change 2s ease-in-out;
 // }
-
+#global-container {
+    opacity:0;
+    visibility: hidden;
+    &.loaded {
+        opacity :1;
+        visibility: visible;
+    }
+}
 #container {
     background-color: $cBlack;
     position: relative;
