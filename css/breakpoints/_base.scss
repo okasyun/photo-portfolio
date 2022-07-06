@@ -59,6 +59,7 @@ li {
 //     animation: page_change 2s ease-in-out;
 // }
 #global-container {
+    position: relative;
     opacity:0;
     visibility: hidden;
     &.loaded {

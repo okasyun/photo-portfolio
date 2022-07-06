@@ -13,6 +13,7 @@ function dropDown() {
 
 $(window).on('load', function() {
     $('#global-container').addClass('loaded');
+    $('.loader').addClass('end');
     dropDown();
 });
 
